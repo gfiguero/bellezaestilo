@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ad3c59c6a6bb09aa9b3c352b64f5d56",
+    "content-hash": "d714034de61ab20f2f147fb89f3ad975",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -775,31 +775,45 @@
             "time": "2016-12-18T15:42:34+00:00"
         },
         {
-            "name": "gfiguero/pagebundle",
+            "name": "gfiguero/korepagebundle",
             "version": "dev-master",
-            "target-dir": "Gfiguero/PageBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gfiguero/pagebundle.git",
-                "reference": "38e73d94a405b16451d68f7d657737ac6a983fc3"
+                "url": "https://github.com/gfiguero/korepagebundle.git",
+                "reference": "23e5884e2e21bb3b61e0ff207dfb47f1869a167b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gfiguero/pagebundle/zipball/38e73d94a405b16451d68f7d657737ac6a983fc3",
-                "reference": "38e73d94a405b16451d68f7d657737ac6a983fc3",
+                "url": "https://api.github.com/repos/gfiguero/korepagebundle/zipball/23e5884e2e21bb3b61e0ff207dfb47f1869a167b",
+                "reference": "23e5884e2e21bb3b61e0ff207dfb47f1869a167b",
                 "shasum": ""
             },
-            "type": "project",
+            "require": {
+                "symfony/console": "~2.7|~3.0",
+                "symfony/framework-bundle": "~2.7|~3.0",
+                "symfony/process": "~2.7|~3.0",
+                "symfony/yaml": "~2.7|~3.0",
+                "twig/twig": "^1.28.2|^2.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.4",
+                "symfony/doctrine-bridge": "~2.7|~3.0",
+                "symfony/filesystem": "~2.7|~3.0",
+                "symfony/phpunit-bridge": "^3.3"
+            },
+            "type": "symfony-bundle",
             "extra": {
-                "branch-alias": "dev-master"
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
             },
             "autoload": {
-                "psr-0": {
-                    "Gfiguero\\PageBundle": "*"
+                "psr-4": {
+                    "Kore\\Bundle\\PageBundle\\": ""
                 }
             },
             "license": [
-                "proprietary"
+                "MIT"
             ],
             "authors": [
                 {
@@ -809,10 +823,10 @@
             ],
             "description": "A simple page bundle",
             "support": {
-                "source": "https://github.com/gfiguero/pagebundle/tree/master",
-                "issues": "https://github.com/gfiguero/pagebundle/issues"
+                "source": "https://github.com/gfiguero/korepagebundle/tree/master",
+                "issues": "https://github.com/gfiguero/korepagebundle/issues"
             },
-            "time": "2017-05-05 01:31:48"
+            "time": "2017-05-05 04:05:49"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2306,7 +2320,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "gfiguero/pagebundle": 20
+        "gfiguero/korepagebundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
