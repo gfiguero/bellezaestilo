@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "05e3204af6313916a60cd288f865b091",
+    "content-hash": "8ad3c59c6a6bb09aa9b3c352b64f5d56",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -773,6 +773,46 @@
                 "orm"
             ],
             "time": "2016-12-18T15:42:34+00:00"
+        },
+        {
+            "name": "gfiguero/pagebundle",
+            "version": "dev-master",
+            "target-dir": "Gfiguero/PageBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gfiguero/pagebundle.git",
+                "reference": "38e73d94a405b16451d68f7d657737ac6a983fc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gfiguero/pagebundle/zipball/38e73d94a405b16451d68f7d657737ac6a983fc3",
+                "reference": "38e73d94a405b16451d68f7d657737ac6a983fc3",
+                "shasum": ""
+            },
+            "type": "project",
+            "extra": {
+                "branch-alias": "dev-master"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gfiguero\\PageBundle": "*"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Garri Figueroa",
+                    "email": "gfiguero@gmail.com"
+                }
+            ],
+            "description": "A simple page bundle",
+            "support": {
+                "source": "https://github.com/gfiguero/pagebundle/tree/master",
+                "issues": "https://github.com/gfiguero/pagebundle/issues"
+            },
+            "time": "2017-05-05 01:31:48"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2265,7 +2305,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gfiguero/pagebundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
