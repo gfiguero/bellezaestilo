@@ -27,7 +27,7 @@
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.8.*",
         "twig/twig": "^1.0||^2.0",
-        "gfiguero/pagebundle": "dev-master"
+        "gfiguero/korepagebundle": "*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -51,7 +51,7 @@
     },
     "repositories" : [{
         "type" : "vcs",
-        "url" : "https://github.com/gfiguero/pagebundle.git"
+        "url" : "https://github.com/gfiguero/korepagebundle.git"
     }],
     "config": {
         "bin-dir": "bin",
