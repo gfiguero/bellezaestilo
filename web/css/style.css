@@ -288,6 +288,7 @@ blockquote small:before {
 #products .products a.foto {
  color: #1b1b1b;
  text-decoration: none;
+ margin-bottom: 2.2em;
 }
 
 #products .products .caption p {
@@ -458,28 +459,28 @@ blockquote small:before {
 
 #rrss .container .row .redes-sociales ul li.twitter > a:hover {
   background-color: #7732c3;
-  border: none;
+  border: solid 1px #7732c3;
   color: white;
   transition: .7s;
 }
 
 #rrss .container .row .redes-sociales ul li.facebook > a:hover {
   background-color: #7732c3;
-  border: none;
+  border: solid 1px #7732c3;
   color: white;
   transition: .7s;
 }
 
 #rrss .container .row .redes-sociales ul li.youtube > a:hover {
   background-color: #7732c3;
-  border: none;
+  border: solid 1px #7732c3;
   color: white;
   transition: .7s;
 }
 
 #rrss .container .row .redes-sociales ul li.instagram > a:hover {
   background-color: #7732c3;
-  border: none;
+  border: solid 1px #7732c3;
   color: white;
   transition: .7s;
 }
@@ -877,6 +878,7 @@ blockquote small:before {
 #catalog .catalog a.foto {
  color: #1b1b1b;
  text-decoration: none;
+ margin-bottom: 2.2em;
 }
 
 #catalog .catalog .caption p {
