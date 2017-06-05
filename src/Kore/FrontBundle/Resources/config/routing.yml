@@ -1,0 +1,19 @@
+kore_front_index:
+    path: /
+    defaults: { _controller: KoreFrontBundle:Front:index }
+
+kore_front_about:
+    path: /about
+    defaults: { _controller: KoreFrontBundle:Front:about }
+
+kore_front_service:
+    path: /service
+    defaults: { _controller: KoreFrontBundle:Front:service }
+
+kore_front_product:
+    path: /product
+    defaults: { _controller: KoreFrontBundle:Front:product }
+
+kore_front_contact:
+    path: /contact
+    defaults: { _controller: KoreFrontBundle:Front:contact }

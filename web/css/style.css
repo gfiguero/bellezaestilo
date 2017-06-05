@@ -281,153 +281,35 @@ blockquote small:before {
   }
 }
 
-#products {
-  margin-top: 10em;
-}
-
-#products .products a.foto {
- color: #1b1b1b;
- text-decoration: none;
- margin-bottom: 2.2em;
-}
-
-#products .products .caption p {
-  margin-top: 3em;
+#store-description {
+  color: #585f69;
   text-align: center;
-  line-height: 1.5em;
-  padding: 10px;
-  background-color: #eee;
+  background-image: url(../images/about/bg-store-description.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#products .products p b {
-  font-weight: 700;
+#store-description .store-description h1 {  
+  font-family: 'Cinzel', sans-serif;
 }
 
-#products .products p span {
-  color: #7732c3; 
+#store-description .store-description span.outstanding {  
+  color: #b23068;
 }
 
-#products .products .modal-header {
-  border-bottom: none;
+#store-description .store-description-2 {  
+  margin-top: 4em;
 }
 
-#products .products #modalCarousel {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+#store-description .store-description-2 h2 {  
+  margin-top: 0em;
 }
 
-#products .products .modal-content {
-  background-color: #17141f;
-  border-radius: 0px;
-}
-
-#products .products .close {
-  color: white;
-  opacity: 1;
-}
-
-#products .products .close:hover,
-#products .products .close:active, 
-#products .products .close:focus {
-  color: #7732c3;
-  transition: .7s;
-  opacity: 1;
-  text-shadow: none;
-}
-
-#products .products #share ul li > a {
-  border: 1px solid #fff;
-  padding: 5px;
-  border-radius: 50%;
-  color: white;
-  font-size: 25px;
-}
-
-#products .products #product-name span.brand {
-  color: #7732c3;
-}
-
-#products .products #modal {
-  font-family: 'Poiret One', sans-serif;
-  color: white;
-}
-
-#products .products #modal .fa.fa-cart-plus,
-#products .products #modal .fa.fa-plus-circle,
-#products .products #modal .fa.fa-credit-card-alt,
-#products .products #modal .fa.fa-share-alt {
-  color: #a22d59; 
-}
-
-#products .products #modal h2,h3 {
-  font-family: 'Satisfy', sans-serif;
-}
-
-#products .products #modal .carousel-control .glyphicon-chevron-right, 
-#products .products #modal .carousel-control .glyphicon-chevron-left {
-  color: #7732c3;
-}
-
-#products .products #modal p a.btn-modal-contact {
-  background-color: #6ad06c;
-  color: white;
-  font-weight: 600;
-  font-size: 1.2em;
-  border-color: white;
-}
-
-#products .products #modal p a.btn-modal-contact:hover, 
-#products .products #modal p a.btn-modal-contact:active,
-#products .products #modal p a.btn-modal-contact:focus {
-  background-color: #60bd62;
-}
-
-#news {
-  margin-top: 10em;
-}
-
-#news .news a {
-  color: #1b1b1b;
-  text-decoration: none;
-}
-
-#news .news p {
-  margin-top: 1em;
-  text-align: center;
-  line-height: 1.5em;
-}
-
-#news .news p b {
-  font-weight: 700;
-  color: #6ad06c;
-}
-
-#news .news p span {
-  color: #666; 
-}
-
-#news .news p span:nth-of-type(2) {
-  font-size: 1.2em;  
-  font-weight: 600;
-  color: #1e1e1e;
-}
-
-#recommended {
-  margin-top: 10em;
-}
-
-#recommended .carousel {
-  box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.5);
-  z-index: 100;
-}
-
-#recommended .carousel .carousel-control .glyphicon-chevron-left, 
-#recommended .carousel .carousel-control .glyphicon-chevron-right {
- color: #7732c3;
-}
-
-#recommended .carousel .carousel-indicators .active {
-  background-color: #7732c3;
+#store-description .overlay {  
+  padding: 4em 0;
+  background: rgba(255,255,255,0.85);
 }
 
 #brands {
@@ -565,37 +447,6 @@ blockquote small:before {
 
 #store-gallery .store-gallery .carousel .carousel-indicators .active {
   background-color: #7732c3;
-}
-
-#store-description {
-  color: #585f69;
-  text-align: center;
-  background-image: url(../images/about/bg-store-description.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#store-description .store-description h1 {  
-  font-family: 'Cinzel', sans-serif;
-}
-
-#store-description .store-description span.outstanding {  
-  color: #b23068;
-}
-
-#store-description .store-description-2 {  
-  margin-top: 4em;
-}
-
-#store-description .store-description-2 h2 {  
-  margin-top: 0em;
-}
-
-#store-description .overlay {  
-  padding: 4em 0;
-  background: rgba(255,255,255,0.85);
 }
 
 /*** SERVICIOS ***/
@@ -970,6 +821,24 @@ blockquote small:before {
 #catalog .catalog #modal p a.btn-modal-contact:active,
 #catalog .catalog #modal p a.btn-modal-contact:focus {
   background-color: #60bd62;
+}
+
+#recommended {
+  margin-top: 10em;
+}
+
+#recommended .carousel {
+  box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.5);
+  z-index: 100;
+}
+
+#recommended .carousel .carousel-control .glyphicon-chevron-left, 
+#recommended .carousel .carousel-control .glyphicon-chevron-right {
+ color: #7732c3;
+}
+
+#recommended .carousel .carousel-indicators .active {
+  background-color: #7732c3;
 }
 
 /*** CONTACT ***/
