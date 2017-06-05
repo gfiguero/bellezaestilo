@@ -5,3 +5,7 @@ kore_admin:
 kore_page:
     resource: "@KorePageBundle/Resources/config/routing.yml"
     prefix:   /kore/page
+
+kore_front:
+    resource: "@KoreFrontBundle/Resources/config/routing.yml"
+    prefix:   /
