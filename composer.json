@@ -27,7 +27,19 @@
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.8.*",
         "twig/twig": "^1.0||^2.0",
-        "gfiguero/korepagebundle": "dev-master"
+        "stof/doctrine-extensions-bundle": "^1.2",
+        "symfony/assetic-bundle": "^2.8",
+        "symfony/intl": "^2.8",
+        "symfony/validator": "^2.8",
+        "symfony/yaml": "^2.8",
+        "twig/extensions": "^1.3",
+        "knplabs/knp-menu-bundle": "^2.1",
+        "knplabs/knp-paginator-bundle": "^2.5",
+        "knplabs/knp-time-bundle": "^1.6",
+        "onokumus/metismenu": "^2.5",
+        "braincrafted/bootstrap-bundle": "^2.2",
+        "liip/imagine-bundle": "^1.5",
+        "vich/uploader-bundle": "^1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -43,10 +55,12 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-install-cmd": [
-            "@symfony-scripts"
+            "@symfony-scripts",
+            "bower install"
         ],
         "post-update-cmd": [
-            "@symfony-scripts"
+            "@symfony-scripts",
+            "bower update"
         ]
     },
     "repositories" : [{

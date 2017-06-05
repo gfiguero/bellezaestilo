@@ -1,0 +1,22 @@
+HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
+setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs
+setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs
+
+HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
+setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX web/uploads web/media
+setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX web/uploads web/media
+
+php app/console generate:bundle --namespace Kore/AdminGeneratorBundle --dir src --bundle-name KoreAdminGeneratorBundle --format yml --shared --no-interaction
+php app/console generate:bundle --namespace Kore/AdminBundle --dir src --bundle-name KoreAdminBundle --format yml --shared --no-interaction
+
+
+php app/console doctrine:generate:entities KlanPageBundle:Testing --path=src
+php app/console generate:doctrine:crud --entity=KlanPageBundle:Testing --format=yml --with-write --overwrite --no-interaction --route-prefix=testing
+
+php app/console assetic:dump --env=dev
+
+php app/console doctrine:database:drop --force
+php app/console doctrine:database:create
+php app/console doctrine:schema:update --force
+
+

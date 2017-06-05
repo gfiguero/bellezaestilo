@@ -1,0 +1,35 @@
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ ]
+    filters:
+        cssrewrite: ~
+        less:
+            node: %node_bin_path%
+            node_paths: [%node_lib_path%]
+    read_from: %kernel.root_dir%/
+    write_to: %kernel.root_dir%/../web
+    assets:
+        frontend_css:
+            inputs:
+                - Resources/less/frontend/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: css/frontend.css
+        frontend_js:
+            inputs: 
+                - Resources/js/frontend/custom.js
+            output: js/frontend.js
+        backend_css:
+            inputs:
+                - Resources/less/backend/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: css/backend.css
+        backend_js:
+            inputs: 
+                - Resources/js/backend/custom.js
+            output: js/backend.js
