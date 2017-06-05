@@ -1,0 +1,66 @@
+Kore\AdminBundle\Entity\Frontpage:
+    type: entity
+    table: Frontpage
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        photos:
+            targetEntity: Kore\AdminBundle\Entity\FrontpagePhoto
+            mappedBy: frontpage
+    fields:
+        name:
+            type: string
+            length: 300
+        title:
+            type: string
+            length: 300
+        subtitle:
+            type: string
+            length: 300
+            nullable: true
+        about:
+            type: string
+            length: 300
+            nullable: true
+        subabout:
+            type: string
+            length: 300
+            nullable: true
+        service:
+            type: string
+            length: 300
+            nullable: true
+        subservice:
+            type: string
+            length: 300
+            nullable: true
+        calltoaction:
+            type: string
+            length: 300
+            nullable: true
+        contact:
+            type: string
+            length: 300
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }

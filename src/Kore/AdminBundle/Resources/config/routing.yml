@@ -1,0 +1,16 @@
+kore_admin_product:
+    resource: "@KoreAdminBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+
+kore_admin_feature:
+    resource: "@KoreAdminBundle/Resources/config/routing/feature.yml"
+    prefix:   /feature
+
+kore_admin_frontpage:
+    resource: "@KoreAdminBundle/Resources/config/routing/frontpage.yml"
+    prefix:   /frontpage
+
+kore_admin_frontpagephoto:
+    resource: "@KoreAdminBundle/Resources/config/routing/frontpagephoto.yml"
+    prefix:   /frontpagephoto
+

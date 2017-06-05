@@ -1,0 +1,96 @@
+{% extends 'KoreAdminBundle:Base:base.html.twig' %}
+{% use 'KoreAdminBundle:Base:navbar.html.twig' %}
+{% use 'KoreAdminBundle:Base:sidebar.html.twig' %}
+{% use 'KoreAdminBundle:Base:icons.html.twig' %}
+{% use 'KoreAdminBundle:Base:flashbag.html.twig' %}
+
+{% trans_default_domain 'KoreAdminBundle' %}
+
+{% block title %}{{ 'feature.show.title'|trans({'%id%':feature.id}) }}{% endblock %}
+
+{% block body %}
+    
+    <div id="page-wrapper">
+        <div class="row" id="page-header">
+            <div class="col-lg-12">
+                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'feature.show.title'|trans({'%id%':feature.id}) }}</h1>
+                {% block flashbag %}{{ parent() }}{% endblock %}
+            </div>
+        </div>
+        <!-- /#page-header -->
+
+        <div class="row" id="page-toolbar">
+            <div class="col-lg-12">
+                <div class="btn-toolbar">
+                    <a type="button" class="btn btn-default" href="{{ path('admin_feature_index') }}">{{ icon('list') }}&nbsp;{{ 'feature.index.link'|trans }}</a>
+                    <a type="button" class="btn btn-primary" href="{{ path('admin_feature_edit', { 'id': feature.id }) }}">{{ icon('edit') }}&nbsp;{{ 'feature.edit.link'|trans }}</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">{{ icon('trash-o') }}&nbsp;{{ 'feature.delete.link'|trans }}</button>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-toolbar -->
+
+        <div class="row" id="page-show">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">{{ 'feature.show.data'|trans }}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>{{ 'feature.form.id'|trans }}</dt>
+                                <dd>{% if feature.id %}{{ feature.id }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.name'|trans }}</dt>
+                                <dd>{% if feature.name %}{{ feature.name }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.title'|trans }}</dt>
+                                <dd>{% if feature.title %}{{ feature.title }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.subtitle'|trans }}</dt>
+                                <dd>{% if feature.subtitle %}{{ feature.subtitle }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.content'|trans }}</dt>
+                                <dd>{% if feature.content %}{{ feature.content }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.photo'|trans }}</dt>
+                                <dd>{% if feature.photo %}{{ feature.photo }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.createdAt'|trans }}</dt>
+                                <dd>{% if feature.createdAt %}{{ feature.createdAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.updatedAt'|trans }}</dt>
+                                <dd>{% if feature.updatedAt %}{{ feature.updatedAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}{% endif %}</dd>                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-show -->
+
+        
+        
+        
+
+        <div id="page-modal">
+            <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">{{ icon('times') }}</button>
+                            <h4 class="modal-title" id="myModalLabel">{{ 'feature.delete.title'|trans }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-2 text-center">{{ icon('exclamation-triangle fa-5x') }}</div>
+                                <div class="col-xs-10"><p>{{ 'feature.delete.message'|trans }}</p></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            {{ form_start(deleteForm) }}
+                                <button type="submit" class="btn btn-danger pull-right">{{ icon('trash-o') }}&nbsp;{{ 'feature.delete.submit'|trans }}</button>
+                            {{ form_end(deleteForm) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /#page-modal -->
+
+    </div>
+    <!-- /#page-wrapper -->
+{% endblock %}
+

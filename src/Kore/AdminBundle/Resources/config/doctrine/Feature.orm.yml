@@ -1,0 +1,47 @@
+Kore\AdminBundle\Entity\Feature:
+    type: entity
+    table: Feature
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 300
+            nullable: true
+        title:
+            type: string
+            length: 300
+            nullable: true
+        subtitle:
+            type: string
+            length: 300
+            nullable: true
+        content:
+            type: text
+            nullable: true
+        photo:
+            type: string
+            length: 300
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+            time_aware: false
+    lifecycleCallbacks: {  }
