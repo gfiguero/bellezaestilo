@@ -1,6 +1,6 @@
 body {
   font-family: 'Slabo 27px', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #1e1e1e;
 }
 
@@ -28,206 +28,118 @@ h2,h3 {
 }
 
 /*** NAVBAR ***/
-.navbar {
-  min-height: 112px;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 0em;
-}
-@media (max-width: 991px) {
-  .navbar {
-    min-height: 66px;
-  }
+.navbar-default {
+  background: transparent;
+  border-color: transparent;
 }
 @media (max-width: 480px) {
-  .navbar {
-    border: none;
-    border-radius: 0;
-    margin-bottom: -.7em;
+  .navbar-default {
+    background: rgba(30,30,30,0.6);
   }
 }
 
-.navbar .navbar-nav > li {
-  background:url(../images/border-line.png) center right no-repeat;
-}
-@media (max-width: 768px){
-  .navbar .navbar-nav > li {
-    background: none;
-  }
-}
-
-.navbar .navbar-nav li:last-child {
-  background: none;
-}
-
-.navbar .navbar-nav > li > a {
+.navbar-default  .navbar-nav > li > a {
   font-family: 'Poiret One', sans-serif;
+  font-size: 18px;
   font-weight: bolder;
-  font-size: 14px;
-  color: #1b1b1b;
+  color: white;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar .navbar-nav > li > a {
-    font-size: 13px;
-  }
-}
-
-.navbar .navbar-nav > li > a:hover,
-.navbar .navbar-nav > li > a:active,
-.navbar .navbar-nav > li > a:focus {
-  color: #b23068;
+.navbar-default  .navbar-nav > li > a:hover,
+.navbar-default  .navbar-nav > li > a:focus,
+.navbar-default  .navbar-nav > li > a:active {
+  color: gold;
+  transition: .8s;
   background-color: transparent;
-  transition: all .5s;
 }
 
-.navbar .navbar-header {
-    position: relative;
+.navbar-default .navbar-brand {
+  font-family: 'Satisfy', sans-serif;
+  font-size: 1.8em;
+  color: white; 
 }
 
-.navbar .navbar-nav {
-  margin-top: 0px;
-  display: inline-block;
-  float: none;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:active {
+  color: white; 
 }
 
-@media (min-width: 768px ) and (max-width: 991px) {
-  .navbar .container {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+.navbar-default .navbar-brand span {
+  color: #6ad06c;
 }
 
-.navbar .navbar-brand {
-  position: inherit;
-  display: flex;
-  height: auto;
-  width: auto;
-  padding: 0;
-  float: none;
-}
-@media (max-width: 768px) {
-  .navbar .navbar-brand {
-    position: absolute;
-    display: block;
-  }
+.navbar-default .navbar-toggle {
+  color: white;
 }
 
-.navbar .navbar-brand > img {
-  display: block;
-  margin: auto;
-  margin-top: 1em;
-  height: 112px;
-  width: auto;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar .navbar-brand > img {
-    height: 66px;
-    margin-top: 0em;
-  }
-}
-@media (max-width: 480px) {
-  .navbar .navbar-brand > img {
-    height: 54px;
-    width: auto;
-    margin-top: 0em;
-  }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:active {
+  background-color: #b23068;
 }
 
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-.navbar .navbar-lema {
-  display: block;
-  margin-top: 5.3em;
-  margin-bottom: -.9em;
-  height: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  line-height: 1.2em;
-  color: #fff;
-  text-shadow: 0 2px 4px #333;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar .navbar-lema {
-    font-size: .7em;
-  }
-}
-
-.navbar-mobile {
-  background: #212121;
-}
-
-.navbar .navbar-header .navbar-toggle .icon-bar {
-    background: #fff;
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px) {
-  .navbar-toggle .fa {
-    font-size: 30px;
-  }
-}
-@media (max-width: 768px){
-  .navbar-toggle {
-    background-color: #a22d59;
-    color: #fff;
-  } 
-}
-
-@media (max-width: 768px) { /*** BREAKPOINT NAVBAR ***/
-  .navbar-header {
-    float: none;
-  }
-  
-  .navbar-left,.navbar-right {
-    float: none !important;
-  }
-    
-  .navbar-toggle {
-    display: block;
-  }
-  
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-    
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-    width: 100%;
-  }
-   
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-    
-  .navbar-nav {
-    float: none!important;
-    margin-top: 7.5px;
-    
-    max-height: 80vh;
-  }
-  
-  .navbar-nav>li {
-    float: none;
-  }
-    
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-    
-  .collapse.in{
-    display:block !important;
-  
-  }
+.affix {
+  background: rgba(30,30,30,0.6);
+  border-color: transparent;
+  transition: .3s;
 }
 
 /*** HEADER ***/
 .site-header-inicio {
-  min-height: 70vh;
+  min-height: 100vh;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: bolder;
+  background-image: url(../images/bg-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.site-header-inicio .header-home-content {
+  padding-top: 350px;
+  padding-bottom: 350px;
+  text-align: center;
+}
+@media (max-width: 768px){
+  .site-header-inicio .header-home-content {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  
+  }
+}
+@media (max-width: 480px){
+  .site-header-inicio .header-home-content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  
+  }
+}
+
+
+.site-header-inicio .header-home-content p {
+  font-size: 2em;
+}
+
+.site-header-inicio .header-home-content h1 {
+  font-size: 4em;
+}
+
+.site-header-inicio .header-home-content p a.btn.btn-cta {
+  color: white;
+  background-color: #980198;
+  padding: 10px 30px;
+  font-size: 1em;
+  border-radius: 0px;
+  border-color: #980198;
+  margin-top: 1em;
+}
+
+.site-header-inicio .header-home-content p a.btn.btn-cta:hover,
+.site-header-inicio .header-home-content p a.btn.btn-cta:focus,
+.site-header-inicio .header-home-content p a.btn.btn-cta:active {
+  background-color: purple;
+  border-color: purple;
 }
 
 /*** HOME ***/
@@ -269,6 +181,11 @@ blockquote small:before {
 
 #about-us .about-us #cita {
   margin-top: 6em;
+}
+@media screen and (max-width: 768px) {
+  #about-us .about-us #cita { 
+    margin-top: 2em;
+  }
 }
 
 #about-us .about-us #cita img {
@@ -313,11 +230,79 @@ blockquote small:before {
 }
 
 #brands {
-  margin-top: 10em;
   background: linear-gradient(141deg, #a52f5b 0%, #b64e6e 51%, #a22d59 75%);
   padding: 2em 0;
 }
 
+#contact-info {
+  font-family: 'Poiret One', sans-serif;
+  color: white;
+  text-align: center;
+  background-image: url(../images/about/bg-contact.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-info .overlay {  
+  padding: 10em 0;
+  background: rgba(0,0,0, 0.7);
+}
+
+#contact-info .contact-info h1 {
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 3em;
+  margin-bottom: .5em;
+}
+
+#contact-info .contact-info h2 {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#contact-info .contact-info p {
+  font-size: 22px;
+  text-shadow: 2px 2px 4px #000000;
+  margin-bottom: 2em;
+  font-weight: 600;
+}
+
+#contact-info .contact-info a.info {
+  color: white;
+  text-decoration: none;
+}
+
+#contact-info .contact-info .caption p {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.5em;
+  color: #999999;
+}
+
+#contact-info .contact-info .caption {
+  padding: 4em;
+  background: rgba(0,0,0, 0.6);
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  #contact-info .contact-info .caption {
+    margin-bottom: 2em;
+  }
+}
+
+#contact-info .contact-info .caption .fa {
+  color: #efe661;
+}
+
+#map .map .mapa {
+  padding-bottom: 0em;
+}
+
+#map .embed-responsive {
+  height: 20em;
+}
+/*
 #rrss {
   padding: 3em 0;
 }
@@ -365,57 +350,10 @@ blockquote small:before {
   border: solid 1px #7732c3;
   color: white;
   transition: .7s;
-}
+}*/
+
 
 /*** QUIENES SOMOS ***/
-.site-header-about-us {
-  background-image: url(../images/bg-about-us.jpg);
-  min-height: 300px;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  text-align: left;
-  color: white;
-  font-family: 'Poiret One', sans-serif;
-  text-shadow: 2px 2px 4px #000000;
-  font-weight: bolder;
-}
-@media (max-width: 480px) {
-  .site-header-about-us {
-    min-height: 230px;
-  }
-}
-
-.site-header-about-us h1 {
-  font-size: 4em;
-  display: inline-block;
-  border-bottom: 1px solid #b23068;
-}
-@media (max-width: 480px) {
-  .site-header-about-us h1 {
-    font-size: 3.2em;
-  }
-}
-
-.site-header-about-us p {
-  padding-right: 30%;
-  font-size: 2em;
-}
-@media (max-width: 480px) {
-  .site-header-about-us p {
-    font-size: 1.2em; 
-  }
-}
-
-.site-header-about-us .header-home-content {
-  margin-top: 14.9em;
-  margin-bottom: 30px;
-}
-@media (max-width:480px) {
-  .site-header-about-us .header-home-content {
-    margin-top: 0em;
-  }
-}
 
 #low-text-about-us {
   font-family: 'Poiret One', sans-serif;
@@ -426,79 +364,7 @@ blockquote small:before {
   padding: 2em 0;
 }
 
-#store-gallery {
-  padding: 4em 0;
-  text-align: center;
-}
-
-#store-gallery .store-gallery .carousel {
-  margin-top: 3em;
-}
-
-#store-gallery .store-gallery .carousel {
-  box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.5);
-  z-index: 100;
-}
-
-#store-gallery .store-gallery .carousel .carousel-control .glyphicon-chevron-left, 
-#store-gallery .store-gallery .carousel .carousel-control .glyphicon-chevron-right {
- color: #7732c3;
-}
-
-#store-gallery .store-gallery .carousel .carousel-indicators .active {
-  background-color: #7732c3;
-}
-
 /*** SERVICIOS ***/
-.site-header-services {
-  background-image: url(../images/bg-services.jpg);
-  min-height: 300px;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  text-align: left;
-  color: white;
-  font-family: 'Poiret One', sans-serif;
-  text-shadow: 2px 2px 4px #000000;
-  font-weight: bolder;
-}
-@media (max-width: 480px) {
-  .site-header-services {
-    min-height: 230px;
-  }
-}
-
-
-.site-header-services h1 {
-  font-size: 4em;
-  display: inline-block;
-  border-bottom: 1px solid #b23068;
-}
-@media (max-width: 480px) {
-  .site-header-services h1 {
-    font-size: 3.2em;
-  }
-}
-
-.site-header-services p {
-  padding-right: 30%;
-  font-size: 2em;
-}
-@media (max-width: 480px) {
-  .site-header-services p {
-    font-size: 1.2em; 
-  }
-}
-
-.site-header-services .header-home-content {
-  margin-top: 14.9em;
-  margin-bottom: 30px;
-}
-@media (max-width:480px) {
-  .site-header-services .header-home-content {
-    margin-top:0em;
-  }
-}
 
 #low-text-services {
   font-family: 'Poiret One', sans-serif;
@@ -507,159 +373,6 @@ blockquote small:before {
   color: white;
   background-color: #a55573;
   padding: 2em 0;
-}
-
-#content-service {
-  color: white;
-  text-align: center;
-}
-
-#content-service .content-service .service-1 {
- color: #1e1e1e;
-  padding: 6em 0;
-}
-
-#content-service .content-service .service-1:hover,
-#content-service .content-service .service-1:focus,
-#content-service .content-service .service-1:active {
-  background-color: #635972;
-  color: white;
-  transition: .8s;
-}
-
-#content-service .content-service .service-1:hover .fa.fa-heartbeat,
-#content-service .content-service .service-1:focus .fa.fa-heartbeat,
-#content-service .content-service .service-1:active .fa.fa-heartbeat {
-  color: white;
-  transition: .8s;
-}
-
-#content-service .content-service .service-2 {
-  color: #1e1e1e;
-  padding: 6em 0;
-}
-
-#content-service .content-service .service-2:hover,
-#content-service .content-service .service-2:focus,
-#content-service .content-service .service-2:active {
-  background-color: #635972;
-  color: white;
-  transition: .8s;
-}
-
-#content-service .content-service .service-2:hover .fa.fa-handshake-o,
-#content-service .content-service .service-2:focus .fa.fa-handshake-o,
-#content-service .content-service .service-2:active .fa.fa-handshake-o {
-  color: white;
-  transition: .8s;
-}
-
-#content-service .content-service .service-3 {
-  color: #1e1e1e; 
-  padding: 6em 0;
-}
-
-#content-service .content-service .service-3:hover,
-#content-service .content-service .service-3:focus,
-#content-service .content-service .service-3:active {
-  background-color: #635972;
-  color: white;
-  transition: .8s;
-}
-
-#content-service .content-service .service-3:hover .fa.fa-smile-o,
-#content-service .content-service .service-3:focus .fa.fa-smile-o,
-#content-service .content-service .service-3:active .fa.fa-smile-o {
-  color: white;
-  transition: .8s;
-}
-
-#stats {
-  color: white;
-  text-align: center;
-  background-image: url(../images/about/bg-stats.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#stats .overlay {  
-  padding: 10em 0;
-  background: rgba(0,0,0, 0.5);
-}
-
-@media (max-width: 768px) {
-  #stats .stats .sm-margin-bottom-50 {
-    margin-bottom: 50px;
-  }
-}
-
-#stats .stats .features {
-  width: 130px;
-  height: 130px;
-  padding: 25px;
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  border-radius: 50% !important;
-  background: rgba(255,255,255,0.2);
-}
-
-#stats .stats .features:after {
-  top: -9px;
-  left: -9px;
-  right: -9px;
-  bottom: -9px;
-  content: " ";
-  border-radius: 50%;
-  position: absolute;
-  border: 1px solid #fff;
-}
-
-#stats .stats .features span {
-  color: #fff;
-  display: inline-block;
-  font-weight: 200;
-}
-
-#stats .stats span.percent {
-  font-size: 30px;
-}
-
-#stats .stats .features span.counter {
-  font-size: 30px;
-}
-
-#stats .stats .features span.features-info {
-  text-transform: uppercase;
-}
-
-@media (max-width: 550px) {
-  #stats .stats .features {
-    width: 110px;
-    height: 110px;
-    padding: 22px;
-  }
-
-  #stats .stats .features:after {
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
-  }
-
-  #stats .stats .features span.counter {
-    font-size: 20px;
-  }
-
-  #stats .stats span.percent {
-    font-size: 20px;
-  }
-
-  #stats .stats .features span.features-info {
-    font-size: 11px;
-  }
 }
 
 /*** PRODUCTOS ***/
@@ -708,7 +421,7 @@ blockquote small:before {
 }
 @media (max-width:480px) {
   .site-header-products .header-home-content {
-    margin-top: 0em;
+    margin-top: 3em;
   }
 }
 
@@ -722,8 +435,8 @@ blockquote small:before {
 }
 
 #catalog {
-  margin-top: 10em;
-  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-bottom: 2em;
 }
 
 #catalog .catalog a.foto {
@@ -733,7 +446,7 @@ blockquote small:before {
 }
 
 #catalog .catalog .caption p {
-  margin-top: 3em;
+  margin-top: 1em;
   text-align: center;
   line-height: 1.5em;
   padding: 10px;
@@ -756,6 +469,11 @@ blockquote small:before {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
+@media (max-width: 768px) {
+  #catalog .catalog #modalCarousel {
+    margin-top: 0em;
+  } 
+}
 
 #catalog .catalog .modal-content {
   background-color: #17141f;
@@ -776,14 +494,6 @@ blockquote small:before {
   text-shadow: none;
 }
 
-#catalog .catalog #share ul li > a {
-  border: 1px solid #fff;
-  padding: 5px;
-  border-radius: 50%;
-  color: white;
-  font-size: 25px;
-}
-
 #catalog .catalog #product-name span.brand {
   color: #7732c3;
 }
@@ -801,7 +511,7 @@ blockquote small:before {
 }
 
 #catalog .catalog #modal h2,h3 {
-  font-family: 'Satisfy', sans-serif;
+  font-family: 'Poiret One', sans-serif;
 }
 
 #catalog .catalog #modal .carousel-control .glyphicon-chevron-right, 
@@ -824,7 +534,7 @@ blockquote small:before {
 }
 
 #recommended {
-  margin-top: 10em;
+  margin-bottom: 5em;
 }
 
 #recommended .carousel {
@@ -842,54 +552,6 @@ blockquote small:before {
 }
 
 /*** CONTACT ***/
-.site-header-contact {
-  background-image: url(../images/bg-contact.jpg);
-  min-height: 300px;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  text-align: left;
-  color: white;
-  font-family: 'Poiret One', sans-serif;
-  text-shadow: 2px 2px 4px #000000;
-  font-weight: bolder;
-}
-@media (max-width: 480px) {
-  .site-header-contact {
-    min-height: 230px;
-  }
-}
-
-.site-header-contact h1 {
-  font-size: 4em;
-  display: inline-block;
-  border-bottom: 1px solid #b23068;
-}
-@media (max-width: 480px) {
-  .site-header-contact h1 {
-    font-size: 3.2em;
-  }
-}
-
-.site-header-contact p {
-  padding-right: 30%;
-  font-size: 2em;
-}
-@media (max-width: 480px) {
-  .site-header-contact p {
-    font-size: 1.2em; 
-  }
-}
-
-.site-header-contact .header-home-content {
-  margin-top: 14.9em;
-  margin-bottom: 30px;
-}
-@media (max-width:480px) {
-  .site-header-contact .header-home-content {
-    margin-top: 0em;
-  }
-}
 
 #low-text-contact {
   font-family: 'Poiret One', sans-serif;
@@ -900,74 +562,13 @@ blockquote small:before {
   padding: 2em 0;
 }
 
-#contact-info {
-  font-family: 'Poiret One', sans-serif;
-  color: white;
-  text-align: center;
-  background-image: url(../images/about/bg-contact.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#contact-info .overlay {  
-  padding: 10em 0;
-  background: rgba(0,0,0, 0.7);
-}
-
-#contact-info .contact-info h1 {
-  text-shadow: 2px 2px 4px #000000;
-  font-size: 4em;
-  margin-bottom: .5em;
-}
-
-#contact-info .contact-info h2 {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 600;
-  font-size: 3em;
-}
-
-#contact-info .contact-info p {
-  font-size: 22px;
-  text-shadow: 2px 2px 4px #000000;
-  margin-bottom: 2em;
-  font-weight: 600;
-}
-
-#contact-info .contact-info a.info {
-  color: white;
-  text-decoration: none;
-}
-
-#contact-info .contact-info .caption p {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 1.5em;
-  color: #999999;
-}
-
-#contact-info .contact-info .caption {
-  padding: 4em;
-  background: rgba(0,0,0, 0.6);
-  border-radius: 6px;
-}
-@media (max-width: 768px) {
-  #contact-info .contact-info .caption {
-    margin-bottom: 2em;
-  }
-}
-
-#contact-info .contact-info .caption .fa {
-  color: #efe661;
-}
-
 /*** FOOTER ***/
 
 .site-footer {
   font-family: 'Poiret One', sans-serif;
   font-weight: 600;
   background-color: white;
-  padding: 30px 0;
+  padding: 80px 0 50px;
   font-size: .9em;
   border-top: 1px solid #ccc;
   color: #1e1e1e;
@@ -982,7 +583,7 @@ blockquote small:before {
   line-height: 2.3em;
   padding: 0;
   list-style-type: none;
-  font-size: 13px;
+  font-size: 16px;
 }
 .site-footer .container .row ul li {
   list-style: none;
