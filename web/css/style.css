@@ -90,7 +90,7 @@ h2,h3 {
   min-height: 100vh;
   font-family: 'Poiret One', sans-serif;
   font-weight: bolder;
-  background-image: url(../images/bg-home.jpg);
+  background-image: url(../images/index/bg-home.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -143,88 +143,88 @@ h2,h3 {
 }
 
 /*** HOME ***/
-#about-us {
+#about {
   background: linear-gradient(141deg, #6c4677 0%, #827795 51%, #5e4f74 75%);
   border-bottom: 5px solid #6ad06c;
-  padding: 2em 0;
+  padding: 4em 0;
 }
 
-#about-us h1 {
+#about h1 {
   font-family: 'Satisfy', sans-serif;
   color: #fff;
 }
 
-#about-us p {
+#about p {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.2em;
   color: #fff;
 }
 
-#about-us small {
+#about small {
   font-size: 1em;
   color: #fff;
 }
 
-#about-us blockquote {
+#about blockquote {
   border: none;
 }
 
-#about-us blockquote p.cita {
+#about blockquote p.cita {
  font-family: 'Satisfy', sans-serif;
 }
 
-#about-us blockquote .small:before, 
+#about blockquote .small:before, 
 blockquote footer:before, 
 blockquote small:before {
   content: none;
 }
 
-#about-us .about-us #cita {
+#about .about #cita {
   margin-top: 6em;
 }
 @media screen and (max-width: 768px) {
-  #about-us .about-us #cita { 
+  #about .about #cita { 
     margin-top: 2em;
   }
 }
 
-#about-us .about-us #cita img {
+#about .about #cita img {
   box-shadow: -8px -4px 13px 0px rgba(50, 50, 50, 0.75);
 }
 @media screen and (max-width: 768px) {
-  #about-us .about-us #cita img { 
+  #about .about #cita img { 
     margin: auto;
     display: block;
   }
 }
 
-#store-description {
+#service {
   color: #585f69;
   text-align: center;
-  background-image: url(../images/about/bg-store-description.jpg);
+  background-image: url(../images/service/bg-service.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#store-description .store-description h1 {  
+#service .service h1 {  
   font-family: 'Cinzel', sans-serif;
 }
 
-#store-description .store-description span.outstanding {  
+#service .service span.outstanding {  
   color: #b23068;
 }
 
-#store-description .store-description-2 {  
+#service .services {  
   margin-top: 4em;
 }
 
-#store-description .store-description-2 h2 {  
+#service .services h2 {  
   margin-top: 0em;
 }
 
-#store-description .overlay {  
+#service .overlay {  
   padding: 4em 0;
   background: rgba(255,255,255,0.85);
 }
@@ -234,64 +234,64 @@ blockquote small:before {
   padding: 2em 0;
 }
 
-#contact-info {
+#contact {
   font-family: 'Poiret One', sans-serif;
   color: white;
   text-align: center;
-  background-image: url(../images/about/bg-contact.jpg);
+  background-image: url(../images/contact/bg-contact.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#contact-info .overlay {  
+#contact .overlay {  
   padding: 10em 0;
   background: rgba(0,0,0, 0.7);
 }
 
-#contact-info .contact-info h1 {
+#contact .contact h1 {
   text-shadow: 2px 2px 4px #000000;
   font-size: 3em;
   margin-bottom: .5em;
 }
 
-#contact-info .contact-info h2 {
+#contact .contact h2 {
   font-family: 'Poiret One', sans-serif;
   font-weight: 600;
   font-size: 2em;
 }
 
-#contact-info .contact-info p {
+#contact .contact p {
   font-size: 22px;
   text-shadow: 2px 2px 4px #000000;
   margin-bottom: 2em;
   font-weight: 600;
 }
 
-#contact-info .contact-info a.info {
+#contact .contact a.info {
   color: white;
   text-decoration: none;
 }
 
-#contact-info .contact-info .caption p {
+#contact .contact .caption p {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.5em;
   color: #999999;
 }
 
-#contact-info .contact-info .caption {
+#contact .contact .caption {
   padding: 4em;
   background: rgba(0,0,0, 0.6);
   border-radius: 6px;
 }
 @media (max-width: 768px) {
-  #contact-info .contact-info .caption {
+  #contact .contact .caption {
     margin-bottom: 2em;
   }
 }
 
-#contact-info .contact-info .caption .fa {
+#contact .contact .caption .fa {
   color: #efe661;
 }
 
@@ -302,82 +302,10 @@ blockquote small:before {
 #map .embed-responsive {
   height: 20em;
 }
-/*
-#rrss {
-  padding: 3em 0;
-}
-
-#rrss p {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 600;
-}
-
-#rrss .container .row .redes-sociales ul {
-  margin-top: 1.5em;
-}
-
-#rrss .container .row .redes-sociales ul li > a {
-  border: 1px solid #1E1E1E;
-  padding: 5px;
-  border-radius: 50%;
-  color: #1E1E1E;
-  font-size: 25px;
-}
-
-#rrss .container .row .redes-sociales ul li.twitter > a:hover {
-  background-color: #7732c3;
-  border: solid 1px #7732c3;
-  color: white;
-  transition: .7s;
-}
-
-#rrss .container .row .redes-sociales ul li.facebook > a:hover {
-  background-color: #7732c3;
-  border: solid 1px #7732c3;
-  color: white;
-  transition: .7s;
-}
-
-#rrss .container .row .redes-sociales ul li.youtube > a:hover {
-  background-color: #7732c3;
-  border: solid 1px #7732c3;
-  color: white;
-  transition: .7s;
-}
-
-#rrss .container .row .redes-sociales ul li.instagram > a:hover {
-  background-color: #7732c3;
-  border: solid 1px #7732c3;
-  color: white;
-  transition: .7s;
-}*/
-
-
-/*** QUIENES SOMOS ***/
-
-#low-text-about-us {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 600;
-  font-size: 1.5em;
-  color: white;
-  background-color: #635972;
-  padding: 2em 0;
-}
-
-/*** SERVICIOS ***/
-
-#low-text-services {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 600;
-  font-size: 1.5em;
-  color: white;
-  background-color: #a55573;
-  padding: 2em 0;
-}
 
 /*** PRODUCTOS ***/
 .site-header-products {
-  background-image: url(../images/bg-products.jpg);
+  background-image: url(../images/products/bg-products.jpg);
   min-height: 300px;
   background-size: cover;
   background-position: top center;
@@ -419,7 +347,7 @@ blockquote small:before {
   margin-top: 14.9em;
   margin-bottom: 30px;
 }
-@media (max-width:480px) {
+@media (max-width:768px) {
   .site-header-products .header-home-content {
     margin-top: 3em;
   }
@@ -430,7 +358,7 @@ blockquote small:before {
   font-weight: 600;
   font-size: 1.5em;
   color: white;
-  background-color: #6aa16b;
+  background-color: #635972;
   padding: 2em 0;
 }
 
