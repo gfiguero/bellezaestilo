@@ -1,29 +1,32 @@
 {% block navbar %}
-    <nav class="navbar">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand hidden-sm hidden-xs" href="#">
-                <img src="{{ asset('images/logo.png') }}" alt="Belleza Estilo">
-                <h1 class="sr-only">Belleza Estilo</h1>
-            </a>
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
-                    <i class="fa fa-bars"></i>
-                    <span class="sr-only">Menu</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-main">
+                    <span class="sr-only">Toggle navigation</span> Menú <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand hidden-lg hidden-md" href="#">
-                    <img src="images/logo.png" alt="Belleza Estilo">
-                    <h1 class="sr-only">Belleza Estilo</h1>
-                </a>
+                <a class="navbar-brand page-scroll" href="#home"><span>B</span>elleza <span>E</span>stilo</a>
             </div>
-            <div class="collapse navbar-collapse" id="main-menu">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ path('kore_front_index') }}">INICIO</a></li>
-                    <li class=""><a href="{{ path('kore_front_about') }}">QUIÉNES SOMOS</a></li>
-                    <li class=""><a href="{{ path('kore_front_service') }}">SERVICIOS</a></li>
-                    <li class=""><a href="{{ path('kore_front_product') }}">PRODUCTOS</a></li>
-                    <li class=""><a href="{{ path('kore_front_contact') }}">CONTACTO</a></li>
+          
+            <div class="collapse navbar-collapse" id="nav-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home" class="page-scroll">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="page-scroll">Quiénes Somos</a>
+                    </li>
+                    <li>
+                        <a href="#service" class="page-scroll">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="page-scroll">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('kore_front_product') }}" class="page-scroll">Productos</a>
+                    </li>
                 </ul>
             </div>
-        </div>
+        </div>   
     </nav>
 {% endblock %}

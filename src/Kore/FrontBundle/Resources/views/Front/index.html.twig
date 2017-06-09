@@ -2,9 +2,9 @@
 {% use 'KoreFrontBundle:Front:navbar.html.twig' %}
 {% use 'KoreFrontBundle:Front:header.html.twig' %}
 {% use 'KoreFrontBundle:Front:about.html.twig' %}
-{% use 'KoreFrontBundle:Front:store-description.html.twig' %}
+{% use 'KoreFrontBundle:Front:service.html.twig' %}
 {% use 'KoreFrontBundle:Front:brands.html.twig' %}
-{% use 'KoreFrontBundle:Front:contact-info.html.twig' %}
+{% use 'KoreFrontBundle:Front:contact.html.twig' %}
 {% use 'KoreFrontBundle:Front:footer.html.twig' %}
 
 {% block title %}{% endblock %}
@@ -13,9 +13,9 @@
     {% block navbar %}{{ parent() }}{% endblock %}
     {% block header %}{{ parent() }}{% endblock %}
     {% block about %}{{ parent() }}{% endblock %}
-    {% block storedescription %}{{ parent() }}{% endblock %}
+    {% block service %}{{ parent() }}{% endblock %}
     {% block brands %}{{ parent() }}{% endblock %}  
-    {% block contactinfo %}{{ parent() }}{% endblock %}     
+    {% block contact %}{{ parent() }}{% endblock %}     
     {% block footer %}{{ parent() }}{% endblock %}
 {% endblock %}
 
@@ -36,15 +36,6 @@
                 }
             },
             ]
-        });
-
-        $(function(){
-            $('.site-header-inicio').backstretch([
-                "{{ asset('images/home-slide-1.jpg') }}",
-                "{{ asset('images/home-slide-2.jpg') }}",
-                ],
-                { duration: 4500, fade: 2000 }
-            );
         });
     </script>
 {% endblock %}

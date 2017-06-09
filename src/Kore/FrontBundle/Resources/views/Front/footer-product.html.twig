@@ -1,4 +1,4 @@
-{% block footer %}
+{% block footerproduct %}
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -7,10 +7,10 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <ul>
-                        <li><a href="#home" class="page-scroll">Inicio</a></li>
-                        <li><a href="#about" class="page-scroll">Quiénes Somos</a></li>
-                        <li><a href="#service" class="page-scroll">Servicios</a></li>
-                        <li><a href="#contact" class="page-scroll">Contacto</a></li>
+                        <li><a href="{{ path('kore_front_index') }}#home">Inicio</a></li>
+                        <li><a href="{{ path('kore_front_index') }}#about">Quiénes Somos</a></li>
+                        <li><a href="{{ path('kore_front_index') }}#service">Servicios</a></li>
+                        <li><a href="{{ path('kore_front_index') }}#contact">Contacto</a></li>
                         <li><a href="{{ path('kore_front_product') }}">Productos</a></li>
                     </ul>
                 </div>
