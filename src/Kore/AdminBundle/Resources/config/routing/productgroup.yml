@@ -1,0 +1,24 @@
+admin_productgroup_index:
+    path:     /
+    defaults: { _controller: "KoreAdminBundle:ProductGroup:index" }
+    methods:  GET
+
+admin_productgroup_show:
+    path:     /{id}/show
+    defaults: { _controller: "KoreAdminBundle:ProductGroup:show" }
+    methods:  GET
+
+admin_productgroup_new:
+    path:     /new
+    defaults: { _controller: "KoreAdminBundle:ProductGroup:new" }
+    methods:  [GET, POST]
+
+admin_productgroup_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KoreAdminBundle:ProductGroup:edit" }
+    methods:  [GET, POST]
+
+admin_productgroup_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KoreAdminBundle:ProductGroup:delete" }
+    methods:  DELETE

@@ -29,6 +29,7 @@ class Builder implements ContainerAwareInterface
 
         $sidemenu->addChild('sidemenu.frontpage', array('route' => 'admin_frontpage_index'))->setExtras(array('icon' => 'database fa-fw', 'translation_domain' => 'KoreAdminBundle'));
         $sidemenu->addChild('sidemenu.feature', array('route' => 'admin_feature_index'))->setExtras(array('icon' => 'database fa-fw', 'translation_domain' => 'KoreAdminBundle'));
+        $sidemenu->addChild('sidemenu.productgroup', array('route' => 'admin_productgroup_index'))->setExtras(array('icon' => 'database fa-fw', 'translation_domain' => 'KoreAdminBundle'));
         $sidemenu->addChild('sidemenu.product', array('route' => 'admin_product_index'))->setExtras(array('icon' => 'database fa-fw', 'translation_domain' => 'KoreAdminBundle'));
 
 //        $sidemenu->addChild('sidemenu.datacenter')->setExtras(array('icon' => 'database fa-fw', 'translation_domain' => 'HVGAgentBundle'))->setLabelAttributes(array('class' => 'has-arrow'));

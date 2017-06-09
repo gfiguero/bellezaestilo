@@ -1,9 +1,11 @@
 php app/console doctrine:generate:entities KoreAdminBundle:Frontpage --path=src
 php app/console doctrine:generate:entities KoreAdminBundle:FrontpagePhoto --path=src
 php app/console doctrine:generate:entities KoreAdminBundle:Product --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:ProductGroup --path=src
 php app/console doctrine:generate:entities KoreAdminBundle:Feature --path=src
 
 php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Frontpage --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_frontpage
 php app/console kore:admingenerate:crud --entity=KoreAdminBundle:FrontpagePhoto --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_frontpagephoto
 php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Product --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_product
+php app/console kore:admingenerate:crud --entity=KoreAdminBundle:ProductGroup --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_productgroup
 php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Feature --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_feature

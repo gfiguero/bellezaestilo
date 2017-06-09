@@ -2,6 +2,10 @@ kore_admin_product:
     resource: "@KoreAdminBundle/Resources/config/routing/product.yml"
     prefix:   /product
 
+kore_admin_productgroup:
+    resource: "@KoreAdminBundle/Resources/config/routing/productgroup.yml"
+    prefix:   /productgroup
+
 kore_admin_feature:
     resource: "@KoreAdminBundle/Resources/config/routing/feature.yml"
     prefix:   /feature
