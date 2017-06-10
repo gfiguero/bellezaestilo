@@ -53,6 +53,13 @@ h2,h3 {
   background-color: transparent;
 }
 
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+  color: gold;
+  background-color: transparent;
+}
+
 .navbar-default .navbar-brand {
   font-family: 'Satisfy', sans-serif;
   font-size: 1.8em;
@@ -146,7 +153,7 @@ h2,h3 {
 #about {
   background: linear-gradient(141deg, #6c4677 0%, #827795 51%, #5e4f74 75%);
   border-bottom: 5px solid #6ad06c;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 
 #about h1 {
@@ -295,11 +302,7 @@ blockquote small:before {
   color: #efe661;
 }
 
-#map .map .mapa {
-  padding-bottom: 0em;
-}
-
-#map .embed-responsive {
+#google-map .google-map #map {
   height: 20em;
 }
 
