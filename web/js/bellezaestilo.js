@@ -3,8 +3,6 @@
 (function($) {
     "use strict"; // Start of use strict
 
-<<<<<<< HEAD
-=======
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -14,15 +12,12 @@
         event.preventDefault();
     });
 
->>>>>>> 618b321da7762705690e6573e6c155e5d6e0feae
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
-        target: '#mainNav',
+        target: '.navbar-fixed-top',
         offset: 51
     });
 
-<<<<<<< HEAD
-=======
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function(){ 
             $('.navbar-toggle:visible').click();
@@ -35,5 +30,4 @@
         }
     })
 
->>>>>>> 618b321da7762705690e6573e6c155e5d6e0feae
 })(jQuery); // End of use strict
