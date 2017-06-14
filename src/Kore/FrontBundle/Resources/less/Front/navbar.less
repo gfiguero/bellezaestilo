@@ -1,0 +1,56 @@
+.navbar-default { 
+    background: #222;
+    border-color: transparent;
+@media (min-width: 768px) {
+    .navbar-default {
+        background: transparent;
+        border-color: transparent;
+        padding: 25px 0;
+        transition: padding .3s;
+    }
+}
+    .navbar-collapse {
+        border-color: rgba(255,255,255,.02);
+    }
+    .navbar-nav {
+        >.active {
+            > a,
+            &:focus,
+            &:hover {
+                color: white;
+                background-color: #b23068;
+                border-radius: 3px
+            }
+        }
+        > li {
+            > a {
+                font-size: 18px;
+                font-weight: bolder;
+                color: white;  
+                &:hover,
+                &:focus,
+                &:active {
+                    color: gold;
+                    background-color: transparent;
+                } 
+            }
+        } 
+    }
+    .navbar-brand {
+        font-family: 'Satisfy', sans-serif;
+        color: white; 
+        &:hover,
+        &:focus,
+        &:active {
+            color: white;
+        }
+    }
+    @media (min-width: 768px) {
+        .navbar-brand {
+            font-family: 'Satisfy', sans-serif;
+            font-size: 2em;
+            color: white; 
+            transition: all .3s;
+        }
+    } 
+}
