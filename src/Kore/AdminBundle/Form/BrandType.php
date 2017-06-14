@@ -18,9 +18,9 @@ class BrandType extends AbstractType
                 'label' => 'brand.form.name',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
-            )) 
-            ->add('imagename', null, array(
-                'label' => 'brand.form.imagename',
+            ))
+            ->add('imagefile', 'file', array(
+                'label' => 'brand.form.imagefile',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             ))

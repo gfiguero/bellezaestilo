@@ -13,29 +13,29 @@ class FeatureType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder 
+        $builder
             ->add('name', null, array(
                 'label' => 'feature.form.name',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
-            )) 
+            ))
             ->add('title', null, array(
                 'label' => 'feature.form.title',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
-            )) 
+            ))
             ->add('subtitle', null, array(
                 'label' => 'feature.form.subtitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
-            )) 
+            ))
             ->add('content', null, array(
                 'label' => 'feature.form.content',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
-            )) 
-            ->add('imagename', null, array(
-                'label' => 'feature.form.imagename',
+            ))
+            ->add('imagefile', 'file', array(
+                'label' => 'feature.form.imagefile',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             ))

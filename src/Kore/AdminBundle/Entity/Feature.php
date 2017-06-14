@@ -2,9 +2,16 @@
 
 namespace Kore\AdminBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Feature
+ * @ORM\Entity
+ * @Vich\Uploadable
  */
+
 class Feature
 {
     /**
@@ -36,6 +43,12 @@ class Feature
      * @var string
      */
     private $imagename;
+
+    /**
+     * @Vich\UploadableField(mapping="feature_image", fileNameProperty="imagename")
+     * @var File
+     */
+    private $imagefile;
 
     /**
      * @var \DateTime
@@ -181,6 +194,30 @@ class Feature
     public function getImagename()
     {
         return $this->imagename;
+    }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Feature
+     */
+    public function setImagefile(File $image = null)
+    {
+        $this->imagefile = $image;
+
+        if ($image) {
+            $this->updatedAt = new \DateTime();
+        }
+        
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
     }
 
     /**

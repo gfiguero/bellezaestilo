@@ -2,9 +2,16 @@
 
 namespace Kore\AdminBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Brand
+ * @ORM\Entity
+ * @Vich\Uploadable
  */
+
 class Brand
 {
     /**
@@ -21,6 +28,12 @@ class Brand
      * @var string
      */
     private $imagename;
+
+    /**
+     * @Vich\UploadableField(mapping="brand_image", fileNameProperty="imagename")
+     * @var File
+     */
+    private $imagefile;
 
     /**
      * @var \DateTime
@@ -94,6 +107,30 @@ class Brand
     public function getImagename()
     {
         return $this->imagename;
+    }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Brand
+     */
+    public function setImagefile(File $image = null)
+    {
+        $this->imagefile = $image;
+
+        if ($image) {
+            $this->updatedAt = new \DateTime();
+        }
+        
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
     }
 
     /**
