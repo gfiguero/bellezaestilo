@@ -36,7 +36,7 @@ h2,h3 {
     transition: padding .3s;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .navbar-default {
     background: #222;
     border-color: transparent;
@@ -112,7 +112,7 @@ h2,h3 {
   transition: .3s;
   padding: 10px 0;
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .affix {
     padding: 0;
   }
