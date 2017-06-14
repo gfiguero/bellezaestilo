@@ -9,7 +9,7 @@
 {% block title %}{{ 'feature.show.title'|trans({'%id%':feature.id}) }}{% endblock %}
 
 {% block body %}
-    
+
     <div id="page-wrapper">
         <div class="row" id="page-header">
             <div class="col-lg-12">
@@ -48,8 +48,8 @@
                                 <dd>{% if feature.subtitle %}{{ feature.subtitle }}{% endif %}</dd>
                             <dt>{{ 'feature.form.content'|trans }}</dt>
                                 <dd>{% if feature.content %}{{ feature.content }}{% endif %}</dd>
-                            <dt>{{ 'feature.form.photo'|trans }}</dt>
-                                <dd>{% if feature.photo %}{{ feature.photo }}{% endif %}</dd>
+                            <dt>{{ 'feature.form.imagename'|trans }}</dt>
+                                <dd>{% if feature.imagename %}{{ feature.imagename }}{% endif %}</dd>
                             <dt>{{ 'feature.form.createdAt'|trans }}</dt>
                                 <dd>{% if feature.createdAt %}{{ feature.createdAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}{% endif %}</dd>
                             <dt>{{ 'feature.form.updatedAt'|trans }}</dt>
@@ -60,13 +60,9 @@
         </div>
         <!-- /#page-show -->
 
-        
-        
-        
-
         <div id="page-modal">
             <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-dialog modal-md" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">{{ icon('times') }}</button>

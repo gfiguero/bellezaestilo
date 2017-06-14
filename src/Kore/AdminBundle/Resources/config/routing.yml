@@ -10,11 +10,19 @@ kore_admin_feature:
     resource: "@KoreAdminBundle/Resources/config/routing/feature.yml"
     prefix:   /feature
 
-kore_admin_frontpage:
-    resource: "@KoreAdminBundle/Resources/config/routing/frontpage.yml"
-    prefix:   /frontpage
+kore_admin_contact:
+    resource: "@KoreAdminBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
 
-kore_admin_frontpagephoto:
-    resource: "@KoreAdminBundle/Resources/config/routing/frontpagephoto.yml"
-    prefix:   /frontpagephoto
+kore_admin_brand:
+    resource: "@KoreAdminBundle/Resources/config/routing/brand.yml"
+    prefix:   /brand
+
+kore_admin_header:
+    resource: "@KoreAdminBundle/Resources/config/routing/header.yml"
+    prefix:   /header
+
+kore_admin_photography:
+    resource: "@KoreAdminBundle/Resources/config/routing/photography.yml"
+    prefix:   /photography
 

@@ -2,16 +2,9 @@
 
 namespace Kore\AdminBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-
 /**
  * Product
- * @ORM\Entity
- * @Vich\Uploadable
  */
-
 class Product
 {
     /**
@@ -35,15 +28,9 @@ class Product
     private $price;
 
     /**
-     * @Vich\UploadableField(mapping="product_image", fileNameProperty="imagename")
-     * @var File
-     */
-    private $imagefile;
-
-    /**
      * @var string
      */
-    private $imagename;
+    private $reference;
 
     /**
      * @var \DateTime
@@ -59,6 +46,11 @@ class Product
      * @var \DateTime
      */
     private $deletedAt;
+
+    /**
+     * @var \Kore\AdminBundle\Entity\ProductGroup
+     */
+    private $productgroup;
 
 
     /**
@@ -144,47 +136,27 @@ class Product
     }
 
     /**
-     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     * Set reference
+     *
+     * @param string $reference
      *
      * @return Product
      */
-    public function setImagefile(File $image = null)
+    public function setReference($reference)
     {
-        $this->imagefile = $image;
+        $this->reference = $reference;
 
-        if ($image) {
-            $this->updatedAt = new \DateTime();
-        }
-        
         return $this;
     }
 
     /**
-     * @return File|null
-     */
-    public function getImagefile()
-    {
-        return $this->imagefile;
-    }
-
-    /**
-     * @param string $imagename
+     * Get reference
      *
-     * @return Product
+     * @return string
      */
-    public function setImagename($imagename)
+    public function getReference()
     {
-        $this->imagename = $imagename;
-        
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getImagename()
-    {
-        return $this->imagename;
+        return $this->reference;
     }
 
     /**
@@ -258,5 +230,28 @@ class Product
     {
         return $this->deletedAt;
     }
-}
 
+    /**
+     * Set productgroup
+     *
+     * @param \Kore\AdminBundle\Entity\ProductGroup $productgroup
+     *
+     * @return Product
+     */
+    public function setProductgroup(\Kore\AdminBundle\Entity\ProductGroup $productgroup = null)
+    {
+        $this->productgroup = $productgroup;
+
+        return $this;
+    }
+
+    /**
+     * Get productgroup
+     *
+     * @return \Kore\AdminBundle\Entity\ProductGroup
+     */
+    public function getProductgroup()
+    {
+        return $this->productgroup;
+    }
+}

@@ -1,0 +1,24 @@
+admin_header_index:
+    path:     /
+    defaults: { _controller: "KoreAdminBundle:Header:index" }
+    methods:  GET
+
+admin_header_show:
+    path:     /{id}/show
+    defaults: { _controller: "KoreAdminBundle:Header:show" }
+    methods:  GET
+
+admin_header_new:
+    path:     /new
+    defaults: { _controller: "KoreAdminBundle:Header:new" }
+    methods:  [GET, POST]
+
+admin_header_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KoreAdminBundle:Header:edit" }
+    methods:  [GET, POST]
+
+admin_header_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KoreAdminBundle:Header:delete" }
+    methods:  DELETE

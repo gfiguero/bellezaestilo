@@ -79,8 +79,6 @@ class DoctrineCrudGenerator extends BaseGenerator
         $this->metadata = $metadata;
         $this->setFormat($format);
 
-        $this->generateControllerClass($forceOverwrite);
-
         //$dir = sprintf('%s/Resources/views/%s', $this->rootDir, strtolower($entity));
         //$dir = sprintf('%s/Resources/views/%s', $this->bundle->getPath(), $entity);
         $dir = sprintf('%s/../AdminBundle/Resources/views/%s', $this->bundle->getPath(), $entity);
@@ -103,6 +101,7 @@ class DoctrineCrudGenerator extends BaseGenerator
             $this->generateEditView($dir);
         }
 
+        $this->generateControllerClass($forceOverwrite);
         $this->generateTestClass();
         $this->generateConfiguration();
     }

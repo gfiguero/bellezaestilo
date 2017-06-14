@@ -34,8 +34,8 @@ class FeatureType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             )) 
-            ->add('photo', null, array(
-                'label' => 'feature.form.photo',
+            ->add('imagename', null, array(
+                'label' => 'feature.form.imagename',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             ))

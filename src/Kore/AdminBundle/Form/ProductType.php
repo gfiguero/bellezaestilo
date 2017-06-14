@@ -29,8 +29,8 @@ class ProductType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             )) 
-            ->add('imagefile', 'file', array(
-                'label' => 'product.form.imagefile',
+            ->add('reference', null, array(
+                'label' => 'product.form.reference',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             ))

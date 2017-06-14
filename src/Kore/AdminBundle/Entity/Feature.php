@@ -35,7 +35,7 @@ class Feature
     /**
      * @var string
      */
-    private $photo;
+    private $imagename;
 
     /**
      * @var \DateTime
@@ -160,27 +160,27 @@ class Feature
     }
 
     /**
-     * Set photo
+     * Set imagename
      *
-     * @param string $photo
+     * @param string $imagename
      *
      * @return Feature
      */
-    public function setPhoto($photo)
+    public function setImagename($imagename)
     {
-        $this->photo = $photo;
+        $this->imagename = $imagename;
 
         return $this;
     }
 
     /**
-     * Get photo
+     * Get imagename
      *
      * @return string
      */
-    public function getPhoto()
+    public function getImagename()
     {
-        return $this->photo;
+        return $this->imagename;
     }
 
     /**

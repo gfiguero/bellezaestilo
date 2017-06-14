@@ -19,7 +19,7 @@ class ProductGroupType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
             )) 
-            ->add('description', null, array(
+            ->add('description', 'textarea', array(
                 'label' => 'productgroup.form.description',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
@@ -28,6 +28,19 @@ class ProductGroupType extends AbstractType
                 'label' => 'productgroup.form.imagefile',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'KoreAdminBundle',
+            ))
+            ->add('products', 'bootstrap_collection', array(
+                'entry_type' => 'Kore\AdminBundle\Form\ProductType',
+                'label' => 'productgroup.form.products',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'KoreAdminBundle',
+                'allow_add' => true,
+                'allow_delete' => true,
+                'sub_widget_col' => 9,
+                'button_col' => 3,
+                'delete_button_text' => 'productgroup.form.deleteproduct',
+                'add_button_text' => 'productgroup.form.addproduct',
+                'by_reference' => false,
             ))
         ;
     }

@@ -7,6 +7,11 @@ Kore\AdminBundle\Entity\ProductGroup:
             id: true
             generator:
                 strategy: AUTO
+    oneToMany:
+        products:
+            targetEntity: Kore\AdminBundle\Entity\Product
+            mappedBy: productgroup
+            cascade: ['persist']
     fields:
         name:
             type: string

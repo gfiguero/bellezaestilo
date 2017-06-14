@@ -1,7 +1,7 @@
 {% block navbar %}
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-main">
                     <span class="sr-only">Toggle navigation</span> Menú <i class="fa fa-bars"></i>
                 </button>
@@ -23,10 +23,11 @@
                         <a href="#contact" class="page-scroll">Contacto</a>
                     </li>
                     <li>
-                        <a href="{{ path('kore_front_product') }}" class="page-scroll">Productos</a>
+                        <a href="{{ path('kore_front_product') }}">Productos</a>
                     </li>
                 </ul>
             </div>
         </div>   
     </nav>
+
 {% endblock %}

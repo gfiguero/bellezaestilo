@@ -7,6 +7,10 @@ Kore\AdminBundle\Entity\Product:
             id: true
             generator:
                 strategy: AUTO
+    manyToOne:
+        productgroup:
+            targetEntity: Kore\AdminBundle\Entity\ProductGroup
+            inversedBy: products
     fields:
         name:
             type: string
@@ -17,10 +21,9 @@ Kore\AdminBundle\Entity\Product:
             nullable: true
         price:
             type: integer
-        imagename:
+        reference:
             type: string
-            length: 300
-            nullable: true
+            length: 1
         createdAt:
             type: datetime
             gedmo:

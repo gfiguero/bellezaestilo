@@ -6,14 +6,14 @@
 
 {% trans_default_domain 'KoreAdminBundle' %}
 
-{% block title %}{{ 'productgroup.show.title'|trans({'%id%':productgroup.id}) }}{% endblock %}
+{% block title %}{{ 'productgroup.show.title'|trans({'%id%':productGroup.id}) }}{% endblock %}
 
 {% block body %}
-    
+
     <div id="page-wrapper">
         <div class="row" id="page-header">
             <div class="col-lg-12">
-                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'productgroup.show.title'|trans({'%id%':productgroup.id}) }}</h1>
+                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'productgroup.show.title'|trans({'%id%':productGroup.id}) }}</h1>
                 {% block flashbag %}{{ parent() }}{% endblock %}
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="col-lg-12">
                 <div class="btn-toolbar">
                     <a type="button" class="btn btn-default" href="{{ path('admin_productgroup_index') }}">{{ icon('list') }}&nbsp;{{ 'productgroup.index.link'|trans }}</a>
-                    <a type="button" class="btn btn-primary" href="{{ path('admin_productgroup_edit', { 'id': productgroup.id }) }}">{{ icon('edit') }}&nbsp;{{ 'productgroup.edit.link'|trans }}</a>
+                    <a type="button" class="btn btn-primary" href="{{ path('admin_productgroup_edit', { 'id': productGroup.id }) }}">{{ icon('edit') }}&nbsp;{{ 'productgroup.edit.link'|trans }}</a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">{{ icon('trash-o') }}&nbsp;{{ 'productgroup.delete.link'|trans }}</button>
                 </div>
             </div>
@@ -56,13 +56,9 @@
         </div>
         <!-- /#page-show -->
 
-        
-        
-        
-
         <div id="page-modal">
             <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-dialog modal-md" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">{{ icon('times') }}</button>

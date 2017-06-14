@@ -1,0 +1,24 @@
+admin_brand_index:
+    path:     /
+    defaults: { _controller: "KoreAdminBundle:Brand:index" }
+    methods:  GET
+
+admin_brand_show:
+    path:     /{id}/show
+    defaults: { _controller: "KoreAdminBundle:Brand:show" }
+    methods:  GET
+
+admin_brand_new:
+    path:     /new
+    defaults: { _controller: "KoreAdminBundle:Brand:new" }
+    methods:  [GET, POST]
+
+admin_brand_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KoreAdminBundle:Brand:edit" }
+    methods:  [GET, POST]
+
+admin_brand_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KoreAdminBundle:Brand:delete" }
+    methods:  DELETE

@@ -1,11 +1,24 @@
-php app/console doctrine:generate:entities KoreAdminBundle:Frontpage --path=src
-php app/console doctrine:generate:entities KoreAdminBundle:FrontpagePhoto --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:Header --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:Photography --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:Feature --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:Brand --path=src
+php app/console doctrine:generate:entities KoreAdminBundle:Contact --path=src
 php app/console doctrine:generate:entities KoreAdminBundle:Product --path=src
 php app/console doctrine:generate:entities KoreAdminBundle:ProductGroup --path=src
-php app/console doctrine:generate:entities KoreAdminBundle:Feature --path=src
 
-php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Frontpage --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_frontpage
-php app/console kore:admingenerate:crud --entity=KoreAdminBundle:FrontpagePhoto --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_frontpagephoto
-php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Product --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_product
-php app/console kore:admingenerate:crud --entity=KoreAdminBundle:ProductGroup --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_productgroup
-php app/console kore:admingenerate:crud --entity=KoreAdminBundle:Feature --format=yml --with-write --overwrite --no-interaction --route-prefix=admin_feature
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Header --route-prefix=admin_header
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Photography --route-prefix=admin_photography
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Feature --route-prefix=admin_feature
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Brand --route-prefix=admin_brand
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Contact --route-prefix=admin_contact
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Product --route-prefix=admin_product
+php app/console kore:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=KoreAdminBundle:ProductGroup --route-prefix=admin_productgroup
+
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Header --route-prefix=admin_header
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Photography --route-prefix=admin_photography
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Feature --route-prefix=admin_feature
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Brand --route-prefix=admin_brand
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Contact --route-prefix=admin_contact
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:Product --route-prefix=admin_product
+php app/console kore:admingenerate:crud --format=yml --with-write --no-interaction --entity=KoreAdminBundle:ProductGroup --route-prefix=admin_productgroup
+

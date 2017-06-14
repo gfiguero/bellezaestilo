@@ -23,7 +23,7 @@ Kore\AdminBundle\Entity\Feature:
         content:
             type: text
             nullable: true
-        photo:
+        imagename:
             type: string
             length: 300
             nullable: true

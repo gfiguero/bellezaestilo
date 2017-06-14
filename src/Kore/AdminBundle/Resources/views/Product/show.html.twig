@@ -46,8 +46,8 @@
                                 <dd>{% if product.description %}{{ product.description }}{% endif %}</dd>
                             <dt>{{ 'product.form.price'|trans }}</dt>
                                 <dd>{% if product.price %}{{ product.price }}{% endif %}</dd>
-                            <dt>{{ 'product.form.imagename'|trans }}</dt>
-                                <dd>{% if product.imagename %}{{ product.imagename }}{% endif %}</dd>
+                            <dt>{{ 'product.form.reference'|trans }}</dt>
+                                <dd>{% if product.reference %}{{ product.reference }}{% endif %}</dd>
                             <dt>{{ 'product.form.createdAt'|trans }}</dt>
                                 <dd>{% if product.createdAt %}{{ product.createdAt|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}{% endif %}</dd>
                             <dt>{{ 'product.form.updatedAt'|trans }}</dt>
