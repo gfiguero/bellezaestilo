@@ -8,28 +8,13 @@ assetic:
         less:
             node: %node_bin_path%
             node_paths: [%node_lib_path%]
-    read_from: %kernel.root_dir%/
-    write_to: %kernel.root_dir%/../web
+    read_from: %kernel.root_dir%/..
+    write_to: %kernel.root_dir%/..
     assets:
         frontend_css:
             inputs:
-                - Resources/less/frontend/build.less
+                - src/Kore/FrontBundle/Resources/less/Front/build.less
             filters:
                 - less
                 - cssrewrite
-            output: css/frontend.css
-        frontend_js:
-            inputs: 
-                - Resources/js/frontend/custom.js
-            output: js/frontend.js
-        backend_css:
-            inputs:
-                - Resources/less/backend/build.less
-            filters:
-                - less
-                - cssrewrite
-            output: css/backend.css
-        backend_js:
-            inputs: 
-                - Resources/js/backend/custom.js
-            output: js/backend.js
+            output: src/Kore/FrontBundle/Resources/public/css/front.css
