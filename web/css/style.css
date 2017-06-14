@@ -1,5 +1,5 @@
 body {
-  font-family: 'Slabo 27px', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-size: 16px;
   color: #1e1e1e;
 }
@@ -28,18 +28,26 @@ h2,h3 {
 }
 
 /*** NAVBAR ***/
-.navbar-default {
-  background: transparent;
-  border-color: transparent;
+@media (min-width: 768px) {
+  .navbar-default {
+    background: transparent;
+    border-color: transparent;
+    padding: 25px 0;
+    transition: padding .3s;
+  }
 }
 @media (max-width: 480px) {
   .navbar-default {
-    background: rgba(30,30,30,0.6);
+    background: #222;
+    border-color: transparent;
   }
 }
 
+.navbar-default .navbar-collapse {
+  border-color: rgba(255,255,255,.02);
+}
+
 .navbar-default  .navbar-nav > li > a {
-  font-family: 'Poiret One', sans-serif;
   font-size: 18px;
   font-weight: bolder;
   color: white;
@@ -49,14 +57,35 @@ h2,h3 {
 .navbar-default  .navbar-nav > li > a:focus,
 .navbar-default  .navbar-nav > li > a:active {
   color: gold;
-  transition: .8s;
   background-color: transparent;
 }
 
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+  color: white;
+  background-color: #b23068;
+  border-radius: 3px;
+}
+
 .navbar-default .navbar-brand {
-  font-family: 'Satisfy', sans-serif;
-  font-size: 1.8em;
-  color: white; 
+    font-family: 'Satisfy', sans-serif;
+    color: white; 
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-brand {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2em;
+    color: white; 
+    transition: all .3s;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-default.affix .navbar-brand {
+    font-size: 1.5em;
+  }
 }
 
 .navbar-default .navbar-brand:hover,
@@ -65,12 +94,10 @@ h2,h3 {
   color: white; 
 }
 
-.navbar-default .navbar-brand span {
-  color: #6ad06c;
-}
-
 .navbar-default .navbar-toggle {
   color: white;
+  background-color: #b23068;
+  border-color: #b23068;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -80,15 +107,20 @@ h2,h3 {
 }
 
 .affix {
-  background: rgba(30,30,30,0.6);
+  background: #222;
   border-color: transparent;
   transition: .3s;
+  padding: 10px 0;
+}
+@media (max-width: 480px) {
+  .affix {
+    padding: 0;
+  }
 }
 
 /*** HEADER ***/
 .site-header-inicio {
   min-height: 100vh;
-  font-family: 'Poiret One', sans-serif;
   font-weight: bolder;
   background-image: url(../images/index/bg-home.jpg);
   background-size: cover;
@@ -119,10 +151,12 @@ h2,h3 {
 
 .site-header-inicio .header-home-content p {
   font-size: 2em;
+  text-shadow: 0 2px 4px #000;
 }
 
 .site-header-inicio .header-home-content h1 {
   font-size: 4em;
+  text-shadow: 0 2px 4px #000;
 }
 
 .site-header-inicio .header-home-content p a.btn.btn-cta {
@@ -133,6 +167,7 @@ h2,h3 {
   border-radius: 0px;
   border-color: #980198;
   margin-top: 1em;
+  text-shadow: none;
 }
 
 .site-header-inicio .header-home-content p a.btn.btn-cta:hover,
@@ -155,7 +190,6 @@ h2,h3 {
 }
 
 #about p {
-  font-family: 'Poiret One', sans-serif;
   font-size: 1.2em;
   color: #fff;
 }
@@ -199,6 +233,8 @@ blockquote small:before {
 }
 
 #service {
+  font-weight: bolder;
+  font-size: 1.2em;
   color: #585f69;
   text-align: center;
   background-image: url(../images/service/bg-service.jpg);
@@ -209,7 +245,7 @@ blockquote small:before {
 }
 
 #service .service h1 {  
-  font-family: 'Cinzel', sans-serif;
+  font-family: 'Satisfy', sans-serif;
 }
 
 #service .service span.outstanding {  
@@ -221,6 +257,8 @@ blockquote small:before {
 }
 
 #service .services h2 {  
+  font-family: 'Poiret One', sans-serif;
+  font-weight: bolder;
   margin-top: 0em;
 }
 
@@ -235,7 +273,6 @@ blockquote small:before {
 }
 
 #contact {
-  font-family: 'Poiret One', sans-serif;
   color: white;
   text-align: center;
   background-image: url(../images/contact/bg-contact.jpg);
@@ -246,7 +283,7 @@ blockquote small:before {
 }
 
 #contact .overlay {  
-  padding: 10em 0;
+  padding: 4em 0;
   background: rgba(0,0,0, 0.7);
 }
 
@@ -275,7 +312,6 @@ blockquote small:before {
 }
 
 #contact .contact .caption p {
-  font-family: 'Poiret One', sans-serif;
   font-size: 1.5em;
   color: #999999;
 }
@@ -295,11 +331,7 @@ blockquote small:before {
   color: #efe661;
 }
 
-#map .map .mapa {
-  padding-bottom: 0em;
-}
-
-#map .embed-responsive {
+#google-map .google-map #map {
   height: 20em;
 }
 
@@ -312,7 +344,6 @@ blockquote small:before {
   background-repeat: no-repeat;
   text-align: left;
   color: white;
-  font-family: 'Poiret One', sans-serif;
   text-shadow: 2px 2px 4px #000000;
   font-weight: bolder;
 }
@@ -349,12 +380,11 @@ blockquote small:before {
 }
 @media (max-width:768px) {
   .site-header-products .header-home-content {
-    margin-top: 3em;
+    margin-top: 8em;
   }
 }
 
 #low-text-products {
-  font-family: 'Poiret One', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
   color: white;
@@ -363,22 +393,25 @@ blockquote small:before {
 }
 
 #catalog {
-  margin-top: 5em;
-  margin-bottom: 2em;
+  padding: 4em 0;
 }
 
 #catalog .catalog a.foto {
- color: #1b1b1b;
- text-decoration: none;
- margin-bottom: 2.2em;
+  color: #1b1b1b;
+  text-decoration: none;
+  margin-bottom: 2.2em;
+}
+
+#catalog .catalog .caption {
+  text-align: center;
+  line-height: 1.2em;
+  padding: 10px;
+  color: white;
+  background-color: #313131;
 }
 
 #catalog .catalog .caption p {
-  margin-top: 1em;
-  text-align: center;
-  line-height: 1.5em;
-  padding: 10px;
-  background-color: #eee;
+  margin: 0;
 }
 
 #catalog .catalog p b {
@@ -386,7 +419,9 @@ blockquote small:before {
 }
 
 #catalog .catalog p span {
-  color: #7732c3; 
+  color: #b23068;
+  font-weight: bolder;
+  font-size: 1.5em; 
 }
 
 #catalog .catalog .modal-header {
@@ -427,7 +462,6 @@ blockquote small:before {
 }
 
 #catalog .catalog #modal {
-  font-family: 'Poiret One', sans-serif;
   color: white;
 }
 
@@ -479,21 +513,9 @@ blockquote small:before {
   background-color: #7732c3;
 }
 
-/*** CONTACT ***/
-
-#low-text-contact {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 600;
-  font-size: 1.5em;
-  color: white;
-  background-color: #70635B;
-  padding: 2em 0;
-}
-
 /*** FOOTER ***/
 
 .site-footer {
-  font-family: 'Poiret One', sans-serif;
   font-weight: 600;
   background-color: white;
   padding: 80px 0 50px;
