@@ -31,7 +31,11 @@ class FrontController extends Controller
     
     public function productAction()
     {
-        return $this->render('KoreFrontBundle:Front:product.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $productGroups = $em->getRepository('KoreAdminBundle:ProductGroup')->findAll();
+        return $this->render('KoreFrontBundle:Front:product.html.twig', array(
+            'productGroups' => $productGroups,
+        ));
     }
 
 }
