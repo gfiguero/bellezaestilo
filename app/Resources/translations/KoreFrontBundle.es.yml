@@ -1,0 +1,16 @@
+topmenu:
+    home: 'Inicio'
+    about: 'Acerca'
+    feature: 'Servicios'
+    contact: 'Contacto'
+    product: 'Productos'
+header:
+    subtitle: 'Tenemos lo que estás buscando'
+    title: 'porque sabemos los que quieres'
+    calltoaction: 'Cuéntame'
+about:
+    title: 'Bienvenidos a Belleza Estilo'
+    content: 'Somos el lugar donde siempre podrás encontrar productos y servicios de calidad, nos preocupamos por hacerte sentir bien, radiante y lo más importante de todo a gusto con tu imagen.'
+feature:
+    title: 'Nuestros Servicios'
+    subtitle: 'Contamos con:'

@@ -1,3 +1,4 @@
+{% trans_default_domain 'KoreFrontBundle' %}
 {% block header %}
     <header id="home">
         <div class="container">
@@ -6,7 +7,7 @@
                     <div class="header-content">
                         <p>{{ 'header.subtitle'|trans }}</p>
                         <h1>{{ 'header.title'|trans }}</h1>
-                        <p><a type="button" href="#about" class="btn btn-default page-scroll">{{ 'header.calltoaction' }}</a></p>
+                        <p><a type="button" href="#about" class="btn btn-default page-scroll">{{ 'header.calltoaction'|trans }}</a></p>
                     </div>
                 </div>
             </div>

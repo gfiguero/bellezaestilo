@@ -23,24 +23,28 @@
     p {
         font-size: 22px;
         text-shadow: 2px 2px 4px #000000;
-        margin-bottom: 2em;
-        font-weight: 600;  
+        font-weight: 600;
+        margin-bottom: 2em;  
     }
     a.info {
         color: white;
         text-decoration: none;
     }
     .caption {
-        padding: 4em;
+        padding: 1em;
         background: rgba(0,0,0, 0.6);
         border-radius: 6px;
         margin-bottom: 2em;
+        @media (min-width: 481px) {
+            padding: 4em;
+        }
         @media (min-width: 769px) {
             margin-bottom: 0;
         }
         p {
             font-size: 1.5em;
             color: #999999; 
+            margin-bottom: 0;
         }
         .fa {
             color: #efe661; 
