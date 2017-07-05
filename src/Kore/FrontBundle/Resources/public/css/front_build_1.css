@@ -1,28 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One:100,300,400,600|Cinzel|Satisfy');
 #home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   min-height: 100vh;
   font-weight: bolder;
-  background-image: url(../../../images/index/bg-home.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/index/bg-home.jpg);
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
 }
 #home .header-content {
-  padding-top: 100px;
-  padding-bottom: 50px;
   text-align: center;
-}
-@media (min-width: 481px) {
-  #home .header-content {
-    padding-top: 300px;
-    padding-bottom: 300px;
-  }
-}
-@media (min-width: 769px) {
-  #home .header-content {
-    padding-top: 350px;
-    padding-bottom: 350px;
-  }
 }
 #home .header-content p {
   font-size: 2em;
@@ -96,18 +87,23 @@
 #contact p {
   font-size: 22px;
   text-shadow: 2px 2px 4px #000000;
-  margin-bottom: 2em;
   font-weight: 600;
+  margin-bottom: 2em;
 }
 #contact a.info {
   color: white;
   text-decoration: none;
 }
 #contact .caption {
-  padding: 4em;
+  padding: 1em;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   margin-bottom: 2em;
+}
+@media (min-width: 481px) {
+  #contact .caption {
+    padding: 4em;
+  }
 }
 @media (min-width: 769px) {
   #contact .caption {
@@ -117,6 +113,7 @@
 #contact .caption p {
   font-size: 1.5em;
   color: #999999;
+  margin-bottom: 0;
 }
 #contact .caption .fa {
   color: #efe661;
@@ -154,11 +151,6 @@
 }
 #about #cita {
   margin-top: 2em;
-}
-@media (min-width: 769px) {
-  #about #cita {
-    margin-top: 6em;
-  }
 }
 #about #cita img {
   box-shadow: -8px -4px 13px 0px rgba(50, 50, 50, 0.75);
@@ -232,7 +224,8 @@
   border-radius: 3px;
 }
 .navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:active {
+.navbar-default .navbar-nav > .active > a:active,
+.navbar-default .navbar-nav > .active > a:hover {
   color: white;
   background-color: #b23068;
   border-radius: 3px;
