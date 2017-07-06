@@ -5,6 +5,7 @@
 {% use 'KoreFrontBundle:Front:feature.html.twig' %}
 {% use 'KoreFrontBundle:Front:brand.html.twig' %}
 {% use 'KoreFrontBundle:Front:contact.html.twig' %}
+{% use 'KoreFrontBundle:Front:navbar-bottom.html.twig' %}
 {% use 'KoreFrontBundle:Front:footer.html.twig' %}
 
 {% trans_default_domain 'KoreFrontBundle' %}
@@ -18,6 +19,7 @@
     {% block brand %}{{ parent() }}{% endblock %}
     {% block feature %}{{ parent() }}{% endblock %}
     {% block contact %}{{ parent() }}{% endblock %}
+    {% block navbarbottom %}{{ parent() }}{% endblock %}
     {% block footer %}{{ parent() }}{% endblock %}
 {% endblock %}
 

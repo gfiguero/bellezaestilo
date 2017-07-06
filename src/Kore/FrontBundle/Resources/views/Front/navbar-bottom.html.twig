@@ -1,0 +1,36 @@
+{% block navbarbottom %}
+    <section id="navbar-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-responsive center-block" src="{{ asset('images/footer/logo.png') }}">
+                </div>
+                <div class="text-center col-md-4 col-sm-4 col-xs-6">
+                    <h4>
+                        Encuéntranos en:
+                    </h4>
+                    <p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Vicuña Mackena #189<br>
+                        La Ligua
+                    </p>
+                    <p>
+                        <i class="fa fa-mobile" aria-hidden="true"></i> (+56-9) 99887766<br>
+                        <i class="fa fa-phone" aria-hidden="true"></i> (+56-32) 2233445
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i> barbarithaaa@hotmail.es
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#home" class="page-scroll">Inicio</a></li>
+                            <li><a href="#about" class="page-scroll">Quiénes Somos</a></li>
+                            <li><a href="#feature" class="page-scroll">Servicios</a></li>
+                            <li><a href="#contact" class="page-scroll">Contacto</a></li>
+                            <li><a href="{{ path('front_product') }}">Productos</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One:100,300,400,600|Cinzel|Satisfy');
+body {
+  font-family: 'Poiret One', 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Poiret One', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 #home {
   display: flex;
   justify-content: center;
@@ -11,6 +24,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  font-family: 'Poiret One', 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 #home .header-content {
   text-align: center;
@@ -41,7 +55,6 @@
 }
 #feature {
   font-weight: bolder;
-  font-size: 1.2em;
   color: #585f69;
   text-align: center;
   background-image: url(../../../images/service/bg-service.jpg);
@@ -49,13 +62,6 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-#feature span.outstanding {
-  color: #b23068;
-}
-#feature h2 {
-  font-weight: bolder;
-  margin-top: 0em;
 }
 #feature .overlay {
   padding: 4em 0;
@@ -76,13 +82,11 @@
 }
 #contact h1 {
   text-shadow: 2px 2px 4px #000000;
-  font-size: 3em;
   margin-bottom: .5em;
 }
 #contact h2 {
   font-family: 'Poiret One', sans-serif;
   font-weight: 600;
-  font-size: 2em;
 }
 #contact p {
   font-size: 22px;
@@ -131,6 +135,7 @@
   padding: 4em 0;
 }
 #about h1 {
+  font-family: 'Satisfy', sans-serif;
   color: #fff;
 }
 #about p {
@@ -143,6 +148,9 @@
 }
 #about blockquote {
   border: none;
+}
+#about blockquote p.cita {
+  font-family: 'Satisfy', sans-serif;
 }
 #about blockquote .small:before,
 #about blockquote footer:before,
@@ -164,44 +172,9 @@
 }
 #footer {
   font-weight: 600;
-  background-color: white;
-  padding: 80px 0 50px;
-  font-size: .9em;
-  border-top: 1px solid #ccc;
-  color: #1e1e1e;
-}
-#footer h4 {
-  font-weight: 600;
-}
-#footer .container .row ul {
-  text-align: center;
-  line-height: 2.3em;
-  padding: 0;
-  list-style-type: none;
-  font-size: 16px;
-}
-#footer .container .row ul li {
-  list-style: none;
-}
-#footer .container .row ul li a {
-  color: #1e1e1e;
-}
-#footer .container .row ul li a:hover,
-#footer .container .row ul li a:focus,
-#footer .container .row ul li a:active {
-  text-decoration: none;
-  color: #b23068;
-}
-#footer .container .row .copy-right {
-  margin-top: 2em;
-}
-@media (min-width: 769px) {
-  #footer .container .row .copy-right {
-    margin-top: 0;
-  }
-}
-#footer .container .row .copy-right img.desarrollador {
-  height: 40px;
+  background-color: #222;
+  padding: 1em 0;
+  color: white;
 }
 .navbar-default {
   background: #222;
@@ -285,4 +258,33 @@
   .affix .navbar-brand {
     font-size: 1.5em;
   }
+}
+#navbar-bottom {
+  font-weight: 600;
+  background-color: white;
+  padding: 80px 0 50px;
+  border-top: 1px solid #ccc;
+  color: #1e1e1e;
+}
+#navbar-bottom h4 {
+  font-weight: 600;
+}
+#navbar-bottom .container .row ul {
+  text-align: center;
+  line-height: 2.3em;
+  padding: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+#navbar-bottom .container .row ul li {
+  list-style: none;
+}
+#navbar-bottom .container .row ul li a {
+  color: #1e1e1e;
+}
+#navbar-bottom .container .row ul li a:hover,
+#navbar-bottom .container .row ul li a:focus,
+#navbar-bottom .container .row ul li a:active {
+  text-decoration: none;
+  color: #b23068;
 }

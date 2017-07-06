@@ -5,16 +5,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>{{ 'feature.title'|trans }}</h2>
+                        <h1>{{ 'feature.title'|trans }}</h1>
                         <p>{{ 'feature.subtitle'|trans }}</p>
                     </div>
-                    {% for item in [1,2,3,4,5,6,7,8,9] %}
-                    <div class="col-md-4 text-center">
-                        {{ icon('check-circle fa-4x') }}
-                        <h3>{{ 'feature.item.title'|trans }}</h3>
-                        <p>{{ 'feature.item.content'|trans }}</p>
+                    <div class="col-md-6 text-center">
+                        {{ icon('scissors fa-4x') }}
+                        <h2>{{ 'feature.item1.title'|trans }}</h2>
+                        <ul class="list-unstyled">
+                            <li>{{ 'feature.item1.contentpart1'|trans }}</li>
+                            <li>{{ 'feature.item1.contentpart2'|trans }}</li>
+                            <li>{{ 'feature.item1.contentpart3'|trans }}</li>
+                            <li>{{ 'feature.item1.contentpart4'|trans }}</li>
+                            <li>{{ 'feature.item1.contentpart5'|trans }}</li>
+                        </ul>
                     </div>
-                    {% endfor %}
+                    <div class="col-md-6 text-center">
+                        {{ icon('shopping-bag fa-4x') }}
+                        <h2>{{ 'feature.item2.title'|trans }}</h2>
+                        <ul class="list-unstyled">
+                            <li>{{ 'feature.item2.contentpart1'|trans }}</li>
+                            <li>{{ 'feature.item2.contentpart2'|trans }}</li>
+                            <li>{{ 'feature.item2.contentpart3'|trans }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
