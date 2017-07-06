@@ -1,10 +1,7 @@
 {% extends 'KoreFrontBundle:Front:base.html.twig' %}
-{#}
 {% use 'KoreFrontBundle:Front:navbar.html.twig' %}
+{#}
 {% use 'KoreFrontBundle:Front:header.html.twig' %}
-{#}
-{% use 'KoreFrontBundle:Front:catalog.html.twig' %}
-{#}
 {% use 'KoreFrontBundle:Front:recommended.html.twig' %}
 {% use 'KoreFrontBundle:Front:footer.html.twig' %}
 {#}
@@ -12,12 +9,78 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-{#}
     {% block navbar %}{{ parent() }}{% endblock %}
-{#}
-    {% block catalog %}{{ parent() }}{% endblock %}  
 {#}
     {% block recommended %}{{ parent() }}{% endblock %}    
     {% block footer %}{{ parent() }}{% endblock %}
 {#}
+    <section id="catalog">
+        <div class="container">
+            <div class="row">
+                {% for k, productGroup in productGroups %}
+                <a href="#" class="col-md-4 col-sm-6 col-xs-12 foto" data-toggle="modal" data-target="#modal{{ k }}">
+                    <div class="thumbnail">
+                        <img class="img-responsive center-block" src="{{ vich_uploader_asset(productGroup, 'imagefile', 'Kore\\AdminBundle\\Entity\\ProductGroup')|imagine_filter('resource_photography_medium') }}" />
+                        <div class="caption">
+                            <h3>{{ productGroup.name }}</h3>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="page-modal">
+            {% for k, productGroup in productGroups %}
+            <div class="modal fade in" id="modal{{ k }}" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <img class="img-responsive img-rounded center-block" src="{{ vich_uploader_asset(productGroup, 'imagefile', 'Kore\\AdminBundle\\Entity\\ProductGroup')|imagine_filter('resource_photography_large') }}" />
+                                </div>
+                                <div class="col-md-3">
+                                    {% for product in productGroup.products %}
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <div class="product-name">{{ product.reference }}&nbsp;<strong>{{ product.name }}</strong></div>
+                                                <div class="product-price">$&nbsp;{{ product.price|number_format(0, ',', '.') }}</div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+{% endblock %}
+
+
+{% block stylesheet %}
+<style type="text/css">
+    body {
+        background-color: #222;
+    }
+    #catalog {
+        margin-top: 100px;
+    }
+    .product-name {
+        font-size: 1.3em;
+    }
+    .product-price {
+        font-size: 1.3em;
+        text-align: right;
+    }
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1200px;
+    }
+}
+</style>
 {% endblock %}

@@ -16,16 +16,11 @@ class FrontController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-//        $header = $em->getRepository('KoreAdminBundle:Header')->findOneById(1);
         $photographies = $em->getRepository('KoreAdminBundle:Photography')->findAll();
-        $contacts = $em->getRepository('KoreAdminBundle:Contact')->findAll();
         $brands = $em->getRepository('KoreAdminBundle:Brand')->findAll();
-        $features = $em->getRepository('KoreAdminBundle:Feature')->findAll();
         return $this->render('KoreFrontBundle:Front:index.html.twig', array(
             'photographies' => $photographies,
-            'contacts'      => $contacts,
             'brands'        => $brands,
-            'features'      => $features,
         ));
     }
     
