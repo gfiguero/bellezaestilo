@@ -11,6 +11,8 @@ Kore\AdminBundle\Entity\Product:
         productgroup:
             targetEntity: Kore\AdminBundle\Entity\ProductGroup
             inversedBy: products
+            joinColumn:
+                onDelete: CASCADE
     fields:
         name:
             type: string

@@ -1,6 +1,6 @@
 kore_admin:
     resource: "@KoreAdminBundle/Resources/config/routing.yml"
-    prefix:   /kore/admin
+    prefix:   /admin
 
 kore_front:
     resource: "@KoreFrontBundle/Resources/config/routing.yml"
