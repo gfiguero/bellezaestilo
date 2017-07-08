@@ -16,10 +16,10 @@ feature:
     subtitle: 'Contamos con:'
     item1:
         title: 'Peluquería'
-        contentpart1: 'Cortes de cabello'
-        contentpart2: 'Alisado keratina'
-        contentpart3: 'Alisado Mechas con papel'
-        contentpart4: 'Visos con papel y tinturado de cabello'
+        contentpart1: 'Corte de cabello'
+        contentpart2: 'Mechas'
+        contentpart3: 'Visos'
+        contentpart4: 'Alisado de keratina permanente'
         contentpart5: 'Masajes capilares'
     item2:
         title: 'Venta de productos'
