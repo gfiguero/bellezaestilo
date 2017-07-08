@@ -6,3 +6,7 @@ front_product:
     path: /product
     defaults: { _controller: KoreFrontBundle:Front:product }
 
+front_login:
+    path:     /login
+    defaults: { _controller: "KoreFrontBundle:Security:login" }
+    methods:  [GET, POST]
