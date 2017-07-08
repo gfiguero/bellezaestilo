@@ -1,0 +1,38 @@
+{% extends 'KoreFrontBundle:Front:base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row login" id="login-page">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ 'login.form.title' }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ form_start(loginForm) }}
+                            {{ form_widget(loginForm) }}
+                            <div class="form-group"><button type="submit" class="btn btn-primary pull-right">{{ icon('sign-in') }}&nbsp;{{ 'login.form.submit'|trans }}</button></div>
+                            {{ form_end(loginForm) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block stylesheet %}
+<style type="text/css">
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#login-page {
+    height: 100vh;
+}
+</style>
+{% endblock %}

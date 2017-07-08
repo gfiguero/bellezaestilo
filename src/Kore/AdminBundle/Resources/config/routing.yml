@@ -25,4 +25,3 @@ kore_admin_header:
 kore_admin_photography:
     resource: "@KoreAdminBundle/Resources/config/routing/photography.yml"
     prefix:   /photography
-
