@@ -63,8 +63,8 @@ function initMap() {
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Tienda Belleza Estilo</h1>'+
             '<div id="bodyContent">'+
-                '<p><b>Belleza Estilo</b>, fusce suscipit enim non sapien convallis, ac scelerisque magna porttitor. Suspendisse potenti. Aliquam ex magna, bibendum id facilisis id, laoreet a ligula. Nullam ornare dictum tortor, ac convallis velit rhoncus congue. Pellentesque purus nisl, commodo sed aliquet quis, eleifend id quam. Nunc ultricies risus massa, in porttitor massa pretium a.'+
-                '<p>Página web: <a href="https://www.bellezaestilo.cl">'+
+                '<p><b>Belleza Estilo</b>, Somos el lugar donde siempre podrás encontrar productos y servicios de calidad, nos preocupamos por hacerte sentir bien, radiante y lo más importante de todo a gusto con tu imagen.'+
+                '<p>Página web: <a href="http://www.bellezaestilo.cl">'+
                 'www.bellezaestilo.cl</a> '+
             '</div>'+
         '</div>';

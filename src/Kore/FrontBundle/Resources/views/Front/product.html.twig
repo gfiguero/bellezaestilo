@@ -1,6 +1,6 @@
 {% extends 'KoreFrontBundle:Front:base.html.twig' %}
-{% use 'KoreFrontBundle:Front:navbar.html.twig' %}
 {#}
+{% use 'KoreFrontBundle:Front:navbar.html.twig' %}
 {% use 'KoreFrontBundle:Front:header.html.twig' %}
 {% use 'KoreFrontBundle:Front:recommended.html.twig' %}
 {% use 'KoreFrontBundle:Front:footer.html.twig' %}
@@ -9,13 +9,15 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    {% block navbar %}{{ parent() }}{% endblock %}
 {#}
-    {% block recommended %}{{ parent() }}{% endblock %}    
+    {% block navbar %}{{ parent() }}{% endblock %}
+    {% block recommended %}{{ parent() }}{% endblock %}   
     {% block footer %}{{ parent() }}{% endblock %}
 {#}
+
     <section id="catalog">
         <div class="container">
+            <p class="text-right"><a type="button" href="{{ path('front_index') }}" class="btn btn-default">{{ icon('arrow-left') }} Volver</a></p>
             <div class="row">
                 {% for k, productGroup in productGroups %}
                 <a href="#" class="col-md-4 col-sm-6 col-xs-12 foto" data-toggle="modal" data-target="#modal{{ k }}">
@@ -38,7 +40,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-9">
-                                    <img class="img-responsive img-rounded center-block" src="{{ vich_uploader_asset(productGroup, 'imagefile', 'Kore\\AdminBundle\\Entity\\ProductGroup')|imagine_filter('resource_photography_large') }}" />
+                                    <img class="img-responsive center-block" src="{{ vich_uploader_asset(productGroup, 'imagefile', 'Kore\\AdminBundle\\Entity\\ProductGroup')|imagine_filter('resource_photography_large') }}" />
                                 </div>
                                 <div class="col-md-3">
                                     {% for product in productGroup.products %}
@@ -58,22 +60,14 @@
             </div>
             {% endfor %}
         </div>
-
-    </section>
+    </section> 
 {% endblock %}
 
 
 {% block stylesheet %}
 <style type="text/css">
     body {
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/products/bg-product.jpg);
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #catalog {
-        margin-top: 100px;
+        background: radial-gradient(#444, #222, black);
     }
     .product-name {
         font-size: 1.3em;
@@ -91,9 +85,14 @@
         display: flex;
         flex-wrap: wrap;
     }
-    a.col-md-4.col-sm-6.col-xs-12.foto {
+    a.foto {
         display: flex;
         text-decoration: none;
+    }
+    a.foto:hover {
+        transform: scale(1.02);
+        transition: .5s;
+        z-index: 1;
     }
     .no-padding {
         padding: 0;
@@ -102,8 +101,14 @@
         border-radius: 0;
     }
     .custom-thumbnail {
-        background-color: #b23068; 
+        margin-bottom: 30px;
+        background-color: #6c4677; 
         border: none;
+    }
+    .custom-thumbnail:hover {
+        box-shadow: 0px 0px 20px 0px fuchsia;
+        transition: .5s;
+        z-index: 1;
     }
     .custom-caption {
         color: white!important;
@@ -112,9 +117,31 @@
         background-color: #222;
     }
     .custom-panel {
-        background-color: #b23068;
+        background-color: #6c4677;
         color: white;
+        border-radius: 0px;
         border-color: white;
     }
+    p.text-right {
+            font-size: 2em;
+            text-shadow: 0 2px 4px #000;  
+            margin-bottom: 0px;
+    } 
+    p a.btn.btn-default {
+        color: white;
+        background-color: #980198;
+        padding: 10px 30px;
+        font-size: 1em;
+        border-radius: 0px;
+        border-color: #980198;
+        margin: .5em 0 .5em 0;
+        text-shadow: none; 
+    }
+    p a.btn.btn-default:hover,
+    p a.btn.btn-default:focus,
+    p a.btn.btn-default:active   {
+        background-color: purple;
+        border-color: purple;
+    }   
 </style>
 {% endblock %}
