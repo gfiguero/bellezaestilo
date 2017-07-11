@@ -39,10 +39,11 @@
                     <div class="modal-content custom-modal-content">
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-12">
+                                    <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times"></span></button>
                                     <img class="img-responsive center-block" src="{{ vich_uploader_asset(productGroup, 'imagefile', 'Kore\\AdminBundle\\Entity\\ProductGroup')|imagine_filter('resource_photography_large') }}" />
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-12">
                                     {% for product in productGroup.products %}
                                         <div class="panel panel-default custom-panel">
                                             <div class="panel-body">
@@ -63,7 +64,6 @@
     </section> 
 {% endblock %}
 
-
 {% block stylesheet %}
 <style type="text/css">
     body {
@@ -76,11 +76,14 @@
         font-size: 1.3em;
         text-align: right;
     }
-@media (min-width: 992px) {
-    .modal-lg {
-        width: 1200px;
+    @media (min-width: 1200px) {
+        .modal-lg {
+            width: 1200px;
+        }
+    }   
+    #page-modal .modal .modal-dialog .modal-content .modal-body .row img.img-responsive.center-block {
+        margin-bottom: 20px;
     }
-}
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -88,11 +91,6 @@
     a.foto {
         display: flex;
         text-decoration: none;
-    }
-    a.foto:hover {
-        transform: scale(1.02);
-        transition: .5s;
-        z-index: 1;
     }
     .no-padding {
         padding: 0;
@@ -105,16 +103,12 @@
         background-color: #6c4677; 
         border: none;
     }
-    .custom-thumbnail:hover {
-        box-shadow: 0px 0px 20px 0px fuchsia;
-        transition: .5s;
-        z-index: 1;
-    }
     .custom-caption {
         color: white!important;
     }
     .custom-modal-content {
         background-color: #222;
+        border-radius: 0px;
     }
     .custom-panel {
         background-color: #6c4677;
@@ -143,5 +137,29 @@
         background-color: purple;
         border-color: purple;
     }   
+    .custom-close {
+        color: white;
+        opacity: 1;
+        text-shadow: none;
+        margin-bottom: 15px;
+    }
+    .custom-close:hover,
+    .custom-close:focus,
+    .custom-close:active {
+        color: gold;
+        opacity: 1;
+    }
+    @media (min-width: 769px) {
+        a.foto:hover {
+            transform: scale(1.02);
+            transition: .5s;
+            z-index: 1;
+        }
+        .custom-thumbnail:hover {
+            box-shadow: 0px 0px 20px 0px fuchsia;
+            transition: .5s;
+            z-index: 1;
+        }
+    }
 </style>
 {% endblock %}
