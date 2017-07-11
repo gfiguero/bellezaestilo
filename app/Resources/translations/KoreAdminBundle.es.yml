@@ -1,0 +1,81 @@
+topmenu:
+    logout: Salir
+sidemenu:
+    productgroup: Grupos de Productos
+    brand: Marcas
+
+productgroup:
+    index:
+        title: Grupos de Productos
+        list: Lista de Grupos
+        link: Volver a la lista de grupos
+    new:
+        link: Nuevo grupo
+        title: Nuevo grupo de productos
+        form: Formulario de registro
+        submit: Confirmar Registro
+    edit:
+        link: Editar Grupo
+        title: Editar grupo de productos
+        form: Formulario de edición
+        submit: Guardar Cambios
+    delete:
+        link: Eliminar Grupo
+        title: Eliminar grupo de productos
+        message: Los datos eliminados no podrán ser recuperados
+        submit: Confirmar Eliminación
+    show:
+        link: Ver Grupo
+        title: Ver datos de grupo de productos
+        data: Datos del grupo
+    form:
+        id: ID
+        name: Nombre
+        description: Descripción
+        imagefile: Foto
+        imagename: Nombre de Foto
+        products: Productos
+        addproduct: Agregar Producto
+        deleteproduct: Eliminar Producto
+        createdAt: Registro
+        updatedAt: Actualización
+
+product:
+    form:
+        name: Nombre
+        description: Descripción
+        price: Precio
+        reference: Código Referencial
+
+brand:
+    index:
+        title: Marcas de productos
+        list: Lista de marcas
+        link: Volver a la lista de marcas
+    new:
+        link: Nueva marca
+        title: Nueva marca de productos
+        form: Formulario de registro
+        submit: Confirmar Registro
+    edit:
+        link: Editar marca
+        title: Editar marca de productos
+        form: Formulario de edición
+        submit: Guardar Cambios
+    delete:
+        link: Eliminar marca
+        title: Eliminar marca de productos
+        message: Los datos eliminados no podrán ser recuperados
+        submit: Confirmar Eliminación
+    show:
+        link: Ver marca
+        title: Ver datos de marca
+        data: Datos de la marca
+    form:
+        id: ID
+        name: Nombre
+        imagefile: Foto
+        imagename: Nombre de Foto
+        createdAt: Registro
+        updatedAt: Actualización
+

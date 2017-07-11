@@ -17,6 +17,7 @@ class Builder implements ContainerAwareInterface
         $topmenu->setChildrenAttribute('id', 'top-menu');
 
 //        $topmenu->addChild('topmenu.header', array('route' => 'admin_header_index'))->setAttributes(array('icon' => 'database fa-fw', 'translation_domain' => 'KoreAdminBundle'));
+        $topmenu->addChild('topmenu.logout', array('route' => 'front_logout'))->setAttributes(array('icon' => 'sign-out fa-fw', 'translation_domain' => 'KoreFrontBundle'));
 
         return $topmenu;
     }
