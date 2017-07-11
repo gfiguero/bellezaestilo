@@ -98,27 +98,27 @@ h5 {
   color: white;
   text-decoration: none;
 }
-#contact .caption {
+#contact a.info .caption {
   padding: 1em;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   margin-bottom: 2em;
 }
 @media (min-width: 481px) {
-  #contact .caption {
+  #contact a.info .caption {
     padding: 4em;
   }
 }
 @media (min-width: 769px) {
-  #contact .caption {
+  #contact a.info .caption {
     margin-bottom: 0;
   }
 }
-#contact .caption p {
+#contact a.info .caption p {
   color: #999999;
   margin-bottom: 0;
 }
-#contact .caption .fa {
+#contact a.info .caption .fa {
   color: #efe661;
 }
 #google-map .google-map #map {
